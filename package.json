@@ -2,7 +2,7 @@
   "name": "edgarmejia.github.io",
   "homepage": "edgarmejia.github.io",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "This is my personal site, made with Gatsby",
   "version": "0.0.2",
   "author": "Edgar Mejía <edgar13155@gmail.com>",
   "dependencies": {
@@ -19,7 +19,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.10.0"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",

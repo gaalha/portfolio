@@ -31,8 +31,10 @@ const Layout = ({ children }) => {
                     <main>{children}</main>
                     <br/>
                     <footer>
-                        © {new Date().getFullYear()}, Built with {` `}
-                        <a href="#">Gatsby</a>
+                        &copy; {new Date().getFullYear()}, Built with {` `}
+                        <a target="_blank" href="https://www.gatsbyjs.org/">Gatsby</a>
+                        &nbsp;-&nbsp;
+                        <a target="_blank" href="https://github.com/edgarMejia/edgarmejia.github.io">Page repo</a>
                     </footer>
                 </div>
             </center>
