@@ -1,30 +1,95 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-// import { FiTerminal, FiSun, FiMoon } from 'react-icons/fi';
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
+import { Helmet } from 'react-helmet'
+import Menu from './menu'
+import style from '../styles/header.module.css'
 
-const Header = ({ siteTitle }) => (
-    <header style={{ background: `#00d6d6`, marginBottom: `1.45rem`, }}>
-        <div style={{
-            marginLeft: `10px`,
-            padding: `0.5rem 1.0875rem`,
-        }}>
-            <h2 style={{marginTop: `15px`}}>
-                <Link to="/" style={{ color: `white`, textDecoration: `none`, textShadow: `2px 2px #098694` }}>
-                    {siteTitle}
-                </Link>
-            </h2>
-        </div>
+const Header = props => {
+    const {
+        siteLogo,
+        logoText,
+        mainMenu,
+        mainMenuItems,
+        menuMoreText,
+        defaultTheme,
+    } = props
+    const defaultThemeState =
+        (typeof window !== 'undefined' && window.localStorage.getItem('theme')) ||
+        null
+    const [userTheme, changeTheme] = useState(defaultThemeState)
+    const [isMobileMenuVisible, toggleMobileMenu] = useState(false)
+    const [isSubMenuVisible, toggleSubMenu] = useState(false)
+    const onChangeTheme = () => {
+        const opositeTheme =
+            (userTheme || defaultTheme) === 'light' ? 'dark' : 'light'
 
-    </header>
-)
+        changeTheme(opositeTheme)
 
-Header.propTypes = {
-    siteTitle: PropTypes.string,
+        typeof window !== 'undefined' &&
+            window.localStorage.setItem('theme', opositeTheme)
+    }
+    const onToggleMobileMenu = () => toggleMobileMenu(!isMobileMenuVisible)
+    const onToggleSubMenu = () => toggleSubMenu(!isSubMenuVisible)
+
+    return (
+        <>
+            <Helmet>
+                <body
+                    className={
+                        (userTheme || defaultTheme) === 'light'
+                            ? 'light-theme'
+                            : 'dark-theme'
+                    }
+                />
+            </Helmet>
+            <header className={style.header}>
+                <div className={style.inner}>
+                    <Link to="/">
+                        <div className={style.logo}>
+                            {siteLogo.src ? (
+                                <img src={siteLogo.src} alt={siteLogo.alt} />
+                            ) : (
+                                    <>
+                                        <span className={style.mark}>></span>
+                                        <span className={style.text}>{logoText}</span>
+                                        <span className={style.cursor} />
+                                    </>
+                                )}
+                        </div>
+                    </Link>
+                    <span className={style.right}>
+                        <Menu
+                            mainMenu={mainMenu}
+                            mainMenuItems={mainMenuItems}
+                            isMobileMenuVisible={isMobileMenuVisible}
+                            isSubMenuVisible={isSubMenuVisible}
+                            menuMoreText={menuMoreText}
+                            onToggleMobileMenu={onToggleMobileMenu}
+                            onToggleSubMenu={onToggleSubMenu}
+                            onChangeTheme={onChangeTheme}
+                            userTheme={userTheme}
+                            defaultTheme={defaultTheme}
+                        />
+                    </span>
+                </div>
+            </header>
+        </>
+    )
 }
 
-Header.defaultProps = {
-    siteTitle: ``,
+Header.propTypes = {
+    siteLogo: PropTypes.object,
+    logoText: PropTypes.string,
+    defaultTheme: PropTypes.string,
+    mainMenu: PropTypes.arrayOf(
+        PropTypes.shape({
+            title: PropTypes.string,
+            path: PropTypes.string,
+        }),
+    ),
+    mainMenuItems: PropTypes.number,
+    menuMoreText: PropTypes.string,
 }
 
 export default Header
