@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
     } = data.site.siteMetadata
 
     return (
-        <div className="container">
+        <div className="container-fluid">
             <Header
                 siteTitle={title}
                 siteLogo={logo}
@@ -52,8 +52,10 @@ const Layout = ({ children }) => {
                 mainMenuItems={showMenuItems}
                 menuMoreText={menuMoreText}
             />
-            <div className="row">
-                {children}
+            <div className="container">
+                <div className="row">
+                    {children}
+                </div>
             </div>
             <Footer copyrights={copyrights} />
         </div>

@@ -1,8 +1,8 @@
 ---
-title: "Tachiyomi 💙"
+title: "Tachiyomi Android 💙"
 path: "/post/053948534985"
 date: "2020-06-18"
-coverImage: ../images/tachiyomi.png
+coverImage: ../images/tachi.jpg
 author: "Edgar Mejía"
 tags: ["Android", "Kotlin", "Manga"]
 ---

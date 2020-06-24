@@ -2,10 +2,12 @@
 title: "Bienvenido a 2014 iOS 🎉"
 path: "/post/090520283048"
 date: "2020-06-24"
-coverImage: ../images/ios14.png
+coverImage: ../images/ios14min.jpg
 author: "Edgar Mejía"
 tags: ["iOS", "Android", "Apple", "Google"]
 ---
+
+![iOS 😓](../images/ios14.png)
 
 iOS ha dado un gran paso y ha descubierto como implementar los widgets de forma correcta en su interfaz, que increiblemente sigue siendo demasiado parecida a la primera versión de iOS, lo que no es malo ya que al ser un diseño que funciona tan bien no ha sido necesario para Apple hacer cambios mayores a la misma.
 

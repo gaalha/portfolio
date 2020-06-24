@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
-import Post from '../components/post'
 import Navigation from '../components/navigation'
 import Card from '../components/card'
 
@@ -32,19 +31,8 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
                     } = node
 
                     return (
-                        // <Post
-                        //     key={id}
-                        //     title={title}
-                        //     date={date}
-                        //     path={path}
-                        //     author={author}
-                        //     coverImage={coverImage}
-                        //     tags={tags}
-                        //     excerpt={excerpt || autoExcerpt}
-                        // />
-                        <div className="col-xs-12 col-md-6 col-lg-4">
+                        <div key={id} className="col-xs-12 col-md-6 col-lg-4">
                             <Card
-                                key={id}
                                 path={path}
                                 title={title}
                                 coverImage={coverImage}

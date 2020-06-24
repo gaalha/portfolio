@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import styled from 'styled-components';
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import BackgroundImage from 'gatsby-background-image'
 
 const Card = ({
     title,
@@ -12,26 +12,31 @@ const Card = ({
     author
 }) => (
     <Link to={path}>
-        <Container className="sexy-card" style={{ elevation: 10 }}>
-            <Cover>
-                {coverImage && (
-                    <Img
-                        fluid={coverImage.childImageSharp.fluid}
-                    />
-                )}
-                {/*<Title>{title}</Title>*/}
-            </Cover>
+        <BackgroundImage
+            fluid={coverImage.childImageSharp.fluid}
+            className="sexy-card"
+            style={{
+                elevation: `10`,
+                width: `315px`,
+                height: `280px`,
+                borderRadius: `14px`,
+                overflow: `hidden`,
+                margin: `20px 10px`,
+                boxShadow: `5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22)`,
+                cursor: `pointer`,
+                transformOrigin: `center`,
+                transition: `filter 200ms linear, transform 200ms linear`,
+                position: `relative`,
+            }}
+        >
             <Content>
-                {/*<Logo src={props.logo} />*/}
-                <Wrapper>
-                    <Caption>{title}</Caption>
-                    <Subtitle>
-                        {subtitle} {author && <>— Written by {author}</>}
-                    </Subtitle>
-                </Wrapper>
+                <Title>{title}</Title>
+                <Subtitle>
+                    {subtitle} {author && <>— Written by {author}</>}
+                </Subtitle>
             </Content>
-        </Container>
-        </Link>
+        </BackgroundImage>
+    </Link>
 );
 
 Card.propTypes = {
@@ -45,10 +50,10 @@ Card.propTypes = {
 export default Card;
 
 const Content = styled.div`
-    padding-left: 20px;
-    flex-direction: row;
-    align-items: center;
-    height: 80px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    padding: 24px;
 `;
 
 const Logo = styled.img`
@@ -63,10 +68,9 @@ const Caption = styled.label`
 `;
 
 const Subtitle = styled.p`
-    color: #b8bece;
-    font-weight: 600;
-    font-size: 15px;
-    margin-top: 4px;
+    color: white;
+    text-shadow: 2px 2px 2px #000;
+    margin-left: 20px;
 `;
 
 const Wrapper = styled.div`
@@ -102,12 +106,11 @@ const Image = styled.img`
     z-index: -1;
 `;
 
-const Title = styled.p`
+const Title = styled.h1`
     color: white;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
-    margin-top: 20px;
     margin-left: 20px;
-    width: 170px;
-    z-index: 5;
+    width: 200px;
+    text-shadow: 2px 2px 2px #000;
 `;

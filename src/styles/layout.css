@@ -362,7 +362,3 @@ footer {
     transform-origin: center;
     transition: filter 200ms linear, transform 200ms linear;
 }
-
-/* .sexy-card:not(:hover) {
-    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
-} */

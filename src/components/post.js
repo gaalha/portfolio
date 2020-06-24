@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
 import Navigation from './navigation'
 import { toKebabCase } from '../helpers'
 import style from '../styles/post.module.css'
@@ -10,7 +9,6 @@ const Post = ({
     title,
     date,
     path,
-    coverImage,
     author,
     excerpt,
     tags,
@@ -42,13 +40,6 @@ const Post = ({
                     ) : null}
                 </div>
 
-                {coverImage && (
-                    <Img
-                        fluid={coverImage.childImageSharp.fluid}
-                        className={style.coverImage}
-                    />
-                )}
-
                 {excerpt ? (
                     <>
                         {/*<p>{excerpt}</p>
@@ -76,7 +67,6 @@ Post.propTypes = {
     title: PropTypes.string,
     date: PropTypes.string,
     path: PropTypes.string,
-    coverImage: PropTypes.object,
     author: PropTypes.string,
     excerpt: PropTypes.string,
     html: PropTypes.string,
