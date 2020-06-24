@@ -1,14 +1,14 @@
 ---
 title: "Mi experiencia con Python"
-path: "/post/090520200306"
+path: "/post/090520200309"
 date: "2020-05-09"
+coverImage: ../images/python.jpg
 author: "Edgar Mejía"
 tags: ["Python", "Flask"]
 ---
 
-![🐍](../images/python.jpg)
+<!-- ![🐍](../images/python.jpg) -->
 
-<!-- coverImage: "../images/hello.jpg" -->
 Desde hace poco más de un año he visto como Python es cada vez más popular, por lo que me he sentido cada
 vez mas interesado en aprender este lenguaje.
 

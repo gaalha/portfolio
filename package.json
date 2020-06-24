@@ -21,6 +21,8 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.7",
+    "bootstrap": "^4.5.0",
     "gatsby": "^2.0.76",
     "gatsby-awesome-pagination": "^0.3.3",
     "gatsby-image": "^2.0.20",
@@ -30,6 +32,8 @@
     "gatsby-plugin-postcss": "^2.0.2",
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sharp": "^2.0.17",
+    "gatsby-plugin-styled-components": "^3.3.6",
+    "gatsby-plugin-transition-link": "^1.18.0",
     "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-prismjs": "^3.2.0",
     "gatsby-source-filesystem": "^2.0.8",
@@ -40,7 +44,8 @@
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0",
-    "react-icons": "^3.10.0"
+    "react-icons": "^3.10.0",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.2.0",

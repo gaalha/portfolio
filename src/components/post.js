@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-// import Img from 'gatsby-image'
+import Img from 'gatsby-image'
 import Navigation from './navigation'
 import { toKebabCase } from '../helpers'
 import style from '../styles/post.module.css'
@@ -42,12 +42,12 @@ const Post = ({
                     ) : null}
                 </div>
 
-                {/*coverImage && (
+                {coverImage && (
                     <Img
                         fluid={coverImage.childImageSharp.fluid}
                         className={style.coverImage}
                     />
-                )*/}
+                )}
 
                 {excerpt ? (
                     <>

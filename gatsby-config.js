@@ -21,10 +21,8 @@ module.exports = {
         showMenuItems: 2,
         menuMoreText: 'Show more',
         mainMenu: [
-            {
-                title: 'About',
-                path: '/about',
-            },
+            {title: 'My repos', path: '/repos'},
+            {title: 'About', path: '/about'},
         ],
     },
     plugins: [
@@ -109,8 +107,8 @@ module.exports = {
                 name: `gatsby-starter-hello-friend`,
                 short_name: `hello-friend`,
                 start_url: `/`,
-                background_color: `#292a2d`,
-                theme_color: `#292a2d`,
+                background_color: `#343434`,
+                theme_color: `#343434`,
                 display: `minimal-ui`,
                 icon: `src/images/avatar.png`,
             },
@@ -123,5 +121,6 @@ module.exports = {
                 minimum: 0.4,
             },
         },
+        `gatsby-plugin-styled-components`
     ],
 }

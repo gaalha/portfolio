@@ -1,9 +1,19 @@
+@import '../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
 @import "./fonts.css";
 @import "./variables.css";
 @import "./prism.css";
 
 html {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    /* height: 100vh; */
+}
+
+body a:hover {
+    text-decoration: none !important;
+}
+
+body a {
+    text-decoration: none !important;
 }
 
 *,
@@ -26,13 +36,16 @@ body {
     font-feature-settings     : "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
     -webkit-overflow-scrolling: touch;
     -webkit-text-size-adjust  : 100%;
+    transition: background-color 0.3s, color 0.3s;
 
     @media (--phone) {
         font-size: 1rem;
     }
 
     &.dark-theme {
-        background-color: var(--dark-background);
+        /* background-color: var(--dark-background); */
+        background: linear-gradient(rgba(130, 46, 96, 0.49) 0%, rgba(0, 0, 0, 0) 100%);
+        background-color: #292a2d;
         color           : var(--dark-color);
     }
 }
@@ -247,18 +260,18 @@ textarea {
     display        : flex;
     flex-direction : column;
     justify-content: center;
-    text-align     : center;
+    /* text-align     : center; */
 }
 
 .content {
     display        : flex;
-    flex-direction : column;
+    /* flex-direction : column; */
     flex           : 1 0 auto;
     align-items    : center;
     justify-content: center;
     margin         : 50px auto;
     width          : 100%;
-    max-width      : 800px;
+    /* max-width      : 800px; */
     padding: 10px 5px 5px
     ;
 
@@ -343,3 +356,13 @@ footer {
         }
     }
 }
+
+.sexy-card:hover {
+    transform: scale(1.05) translateZ(0);
+    transform-origin: center;
+    transition: filter 200ms linear, transform 200ms linear;
+}
+
+/* .sexy-card:not(:hover) {
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+} */

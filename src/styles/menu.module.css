@@ -70,7 +70,7 @@
     z-index       : 99;
 
     :global .dark-theme :local & {
-        background: #252627;
+        background: #191919;
     }
 
     li {

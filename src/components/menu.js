@@ -6,6 +6,7 @@ import { FaMoon } from 'react-icons/fa';
 import { FiSun } from 'react-icons/fi';
 import style from '../styles/menu.module.css'
 
+
 const MainMenu = ({ mainMenu, mainMenuItems, isMobileMenu }) => {
     const menu = mainMenu.slice(0)
     !isMobileMenu && menu.splice(mainMenuItems)
@@ -101,7 +102,7 @@ const Menu = ({
                                 aria-label="Menu"
                             >
                                 {menuMoreText || 'Menu'}{' '}
-                                <span className={style.menuArrow}>></span>
+                                <span className={style.menuArrow}>&#62;</span>
                             </button>
                             {isSubMenuVisible ? (
                                 <ul className={style.subMenu}>

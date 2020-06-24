@@ -32,7 +32,7 @@
     background-color: #fafafa;
 
     :global .dark-theme :local & {
-        background: #252627;
+        background: #101010;
     }
 }
 

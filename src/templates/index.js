@@ -5,6 +5,7 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Post from '../components/post'
 import Navigation from '../components/navigation'
+import Card from '../components/card'
 
 const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
     const {
@@ -31,19 +32,28 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
                     } = node
 
                     return (
-                        <Post
-                            key={id}
-                            title={title}
-                            date={date}
-                            path={path}
-                            author={author}
-                            coverImage={coverImage}
-                            tags={tags}
-                            excerpt={excerpt || autoExcerpt}
-                        />
+                        // <Post
+                        //     key={id}
+                        //     title={title}
+                        //     date={date}
+                        //     path={path}
+                        //     author={author}
+                        //     coverImage={coverImage}
+                        //     tags={tags}
+                        //     excerpt={excerpt || autoExcerpt}
+                        // />
+                        <div className="col-xs-12 col-md-6 col-lg-4">
+                            <Card
+                                key={id}
+                                path={path}
+                                title={title}
+                                coverImage={coverImage}
+                                caption={title}
+                                subtitle={`${date} — by ${author}`}
+                            />
+                        </div>
                     )
                 })}
-
                 <Navigation
                     previousPath={previousPagePath}
                     previousLabel="Newer posts"
@@ -84,7 +94,7 @@ export const postsQuery = graphql`
                         tags
                         coverImage {
                             childImageSharp {
-                                fluid(maxWidth: 800) {
+                                fluid(maxWidth: 900) {
                                     ...GatsbyImageSharpFluid
                                 }
                             }

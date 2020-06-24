@@ -7,7 +7,7 @@
     padding        : 20px;
 
     :global .dark-theme :local & {
-        background: #252627;
+        background: transparent;
     }
 
     a {
@@ -20,7 +20,7 @@
     align-items    : center;
     justify-content: space-between;
     margin         : 0 auto;
-    width          : 760px;
+    width          : 100%;
     max-width      : 100%;
 }
 
