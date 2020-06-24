@@ -117,14 +117,7 @@ const Menu = ({
                     ) : null}
                 </ul>
             </div>
-            <button
-                className={style.themeToggle}
-                onClick={onChangeTheme}
-                type="button"
-                aria-label="Theme toggle"
-            >
-                <span>{THEME_TOGGLE}</span>
-            </button>
+            <span style={{paddingTop: `2px`}} onClick={onChangeTheme}>{THEME_TOGGLE}</span>
         </>
     )
 }
