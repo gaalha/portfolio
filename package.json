@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-hello-friend",
-  "description": "A simple starter for Gatsby. That's it.",
-  "version": "0.2.0",
+  "description": "A simple blog with Gatsby. That's it.",
+  "version": "0.5.0",
   "author": "Edgar Mejía <edgar13155@gmail.com>",
   "keywords": [
     "gatsby",

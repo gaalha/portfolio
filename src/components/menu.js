@@ -123,7 +123,7 @@ const Menu = ({
                 type="button"
                 aria-label="Theme toggle"
             >
-                {THEME_TOGGLE}
+                <span>{THEME_TOGGLE}</span>
             </button>
         </>
     )
