@@ -17,12 +17,13 @@ module.exports = {
         },
         logoText: 'edgarmejia.github.io',
         defaultTheme: 'dark',
-        postsPerPage: 5,
-        showMenuItems: 2,
+        postsPerPage: 6,
+        showMenuItems: 3,
         menuMoreText: 'Show more',
         mainMenu: [
             {title: 'My repos', path: '/repos'},
             {title: 'About', path: '/about'},
+            {title: 'Thanks', path: '/thanks'},
         ],
     },
     plugins: [
