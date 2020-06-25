@@ -5,6 +5,7 @@ import Icon from './icon'
 import style from '../styles/menu.module.css'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { Helmet } from 'react-helmet'
+import { includes } from 'rambdax'
 
 
 const MainMenu = ({ mainMenu, mainMenuItems, isMobileMenu }) => {
@@ -120,11 +121,10 @@ const Menu = ({
                             <body className={theme}/>
                         </Helmet>
 
-                        {theme === "dark" ? (
-                            <img src={require("../images/sun.svg")}/>
-                        ) : (
-                            <img src={require("../images/moon.svg")}/>
-                        )}
+                        <img style={{ cursor: `pointer` }} src={
+                            (theme === 'dark') ? require('../images/sun.svg')
+                                : require('../images/moon.svg')
+                        }/>
                     </div>
                 )}
             </ThemeToggler>
