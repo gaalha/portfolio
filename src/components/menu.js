@@ -116,15 +116,12 @@ const Menu = ({
                         style={{margin: `3px 4px 0 4px`}}
                         onClick={e => toggleTheme(theme === 'light' ? 'dark' : 'light')}
                     >
-                        {theme === "dark" ? (
-                            <>
-                                <FiSun size="18" style={{ cursor: 'pointer' }} />
-                            </>
+                        {/*theme === "dark" ? (
+                            <FiSun size="18" style={{ cursor: 'pointer' }} />
                         ) : (
-                            <>
-                                <FaMoon size="18" style={{ cursor: 'pointer' }} />
-                            </>
-                        )}
+                            <FaMoon size="18" style={{ cursor: 'pointer' }} />
+                        )*/}
+                        {theme}
                     </div>
                 )}
             </ThemeToggler>
