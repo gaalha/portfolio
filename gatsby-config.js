@@ -122,6 +122,7 @@ module.exports = {
                 minimum: 0.4,
             },
         },
-        `gatsby-plugin-styled-components`
+        `gatsby-plugin-styled-components`,
+        `gatsby-plugin-dark-mode`
     ],
 }
