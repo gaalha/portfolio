@@ -5,7 +5,7 @@ import Icon from './icon'
 import { FaMoon } from 'react-icons/fa';
 import { FiSun } from 'react-icons/fi';
 import style from '../styles/menu.module.css'
-
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 
 const MainMenu = ({ mainMenu, mainMenuItems, isMobileMenu }) => {
     const menu = mainMenu.slice(0)
@@ -52,15 +52,8 @@ const Menu = ({
     isSubMenuVisible,
     onToggleMobileMenu,
     onToggleSubMenu,
-    onChangeTheme,
-    userTheme,
-    defaultTheme
 }) => {
     const isSubMenu = !(mainMenuItems >= mainMenu.length) && mainMenuItems > 0
-
-    const THEME_TOGGLE = (userTheme || defaultTheme) === 'light'
-        ? <FaMoon size="18" style={{ cursor: 'pointer' }} />
-        : <FiSun size="18" style={{ cursor: 'pointer' }} />
 
     return (
         <>
@@ -115,11 +108,22 @@ const Menu = ({
                             ) : null}
                         </>
                     ) : null}
-                    <li style={{marginTop: `4px`}}>
-                        <span onClick={onChangeTheme}>{THEME_TOGGLE}</span>
-                    </li>
+                    {/*<li ></li>*/}
                 </ul>
             </div>
+            <ThemeToggler>
+                {({ theme, toggleTheme }) => (
+                    <span
+                        style={{margin: `3px 4px 0 4px`}}
+                        onClick={e => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
+                        {theme === "dark" ? (
+                            <FiSun size="18" style={{ cursor: 'pointer' }} />
+                        ) : (
+                            <FaMoon size="18" style={{ cursor: 'pointer' }} />
+                        )}
+                    </span>
+                )}
+            </ThemeToggler>
         </>
     )
 }
@@ -137,9 +141,6 @@ Menu.propTypes = {
     isSubMenuVisible: PropTypes.bool,
     onToggleMobileMenu: PropTypes.func,
     onToggleSubMenu: PropTypes.func,
-    onChangeTheme: PropTypes.func,
-    userTheme: PropTypes.string,
-    defaultTheme: PropTypes.string,
 }
 
 SubMenu.propTypes = {

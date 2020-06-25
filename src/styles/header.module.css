@@ -6,7 +6,7 @@
     position       : relative;
     padding        : 20px;
 
-    :global .dark-theme :local & {
+    :global .dark :local & {
         background: transparent;
     }
 

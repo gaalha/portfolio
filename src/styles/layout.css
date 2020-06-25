@@ -3,11 +3,6 @@
 @import "./variables.css";
 @import "./prism.css";
 
-html {
-    /* box-sizing: border-box; */
-    /* height: 100vh; */
-}
-
 body a:hover {
     text-decoration: none !important;
 }
@@ -42,7 +37,7 @@ body {
         font-size: 1rem;
     }
 
-    &.dark-theme {
+    &.dark {
         /* background-color: var(--dark-background); */
         background: linear-gradient(rgba(130, 46, 96, 0.49) 0%, rgba(0, 0, 0, 0) 100%);
         background-color: #292a2d;
@@ -164,7 +159,7 @@ code {
     border-radius        : 5px;
     font-size            : .9rem;
 
-    .dark-theme & {
+    .dark & {
         background: var(--dark-background-secondary);
     }
 }
@@ -223,7 +218,7 @@ td {
     border : 1px solid var(--light-color);
     padding: 10px;
 
-    .dark-theme & {
+    .dark & {
         border-color: var(--dark-color);
     }
 }
@@ -231,7 +226,7 @@ td {
 th {
     background: var(--light-background-secondary);
 
-    .dark-theme & {
+    .dark & {
         background: var(--dark-background-secondary);
     }
 }
@@ -290,7 +285,7 @@ hr {
     background: var(--light-border-color);
     height    : 1px;
 
-    .dark-theme & {
+    .dark & {
         background: var(--dark-border-color);
     }
 }
@@ -303,7 +298,7 @@ hr {
     width        : calc(100% - 40px);
     background   : var(--light-background-secondary);
 
-    .dark-theme & {
+    .dark & {
         background: var(--dark-background-secondary);
     }
 

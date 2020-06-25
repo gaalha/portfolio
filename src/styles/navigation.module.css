@@ -20,7 +20,7 @@
     cursor         : pointer;
     appearance     : none;
 
-    :global .dark-theme :local & {
+    :global .dark :local & {
         background: var(--dark-background-secondary);
     }
 

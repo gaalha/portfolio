@@ -12,23 +12,10 @@ const Header = props => {
         mainMenu,
         mainMenuItems,
         menuMoreText,
-        defaultTheme,
     } = props
-    const defaultThemeState =
-        (typeof window !== 'undefined' && window.localStorage.getItem('theme')) ||
-        null
-    const [userTheme, changeTheme] = useState(defaultThemeState)
+    const currentTheme = window.localStorage.getItem('theme')
     const [isMobileMenuVisible, toggleMobileMenu] = useState(false)
     const [isSubMenuVisible, toggleSubMenu] = useState(false)
-    const onChangeTheme = () => {
-        const opositeTheme =
-            (userTheme || defaultTheme) === 'light' ? 'dark' : 'light'
-
-        changeTheme(opositeTheme)
-
-        typeof window !== 'undefined' &&
-            window.localStorage.setItem('theme', opositeTheme)
-    }
     const onToggleMobileMenu = () => toggleMobileMenu(!isMobileMenuVisible)
     const onToggleSubMenu = () => toggleSubMenu(!isSubMenuVisible)
 
@@ -37,9 +24,7 @@ const Header = props => {
             <Helmet>
                 <body
                     className={
-                        (userTheme || defaultTheme) === 'light'
-                            ? 'light-theme'
-                            : 'dark-theme'
+                        currentTheme ? currentTheme : 'light'
                     }
                 />
             </Helmet>
@@ -67,9 +52,6 @@ const Header = props => {
                             menuMoreText={menuMoreText}
                             onToggleMobileMenu={onToggleMobileMenu}
                             onToggleSubMenu={onToggleSubMenu}
-                            onChangeTheme={onChangeTheme}
-                            userTheme={userTheme}
-                            defaultTheme={defaultTheme}
                         />
                     </span>
                 </div>
