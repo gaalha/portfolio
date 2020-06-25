@@ -115,9 +115,11 @@ const Menu = ({
                             ) : null}
                         </>
                     ) : null}
+                    <li style={{marginTop: `4px`}}>
+                        <span onClick={onChangeTheme}>{THEME_TOGGLE}</span>
+                    </li>
                 </ul>
             </div>
-            <span style={{paddingTop: `2px`}} onClick={onChangeTheme}>{THEME_TOGGLE}</span>
         </>
     )
 }
