@@ -114,17 +114,13 @@ const Menu = ({
             <ThemeToggler>
                 {({ theme, toggleTheme }) => (
                     <div
-                        style={{margin: `3px 4px 0 4px`}}
+                        style={{margin: `3px 4px 0 4px`, cursor: `pointer`}}
                         onClick={e => toggleTheme((theme === 'light') ? 'dark' : 'light')}
                     >
                         <Helmet>
                             <body className={theme}/>
                         </Helmet>
-                        {theme === 'dark' ? (
-                            <FiSun size="18" style={{ cursor: 'pointer' }} />
-                        ) : (
-                            <FaMoon size="18" style={{ cursor: 'pointer' }} />
-                        )}
+                        {theme === 'dark' ? (<FiSun />) : (<FaMoon />)}
                     </div>
                 )}
             </ThemeToggler>

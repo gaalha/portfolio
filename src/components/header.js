@@ -30,7 +30,11 @@ const Header = props => {
                                     <>
                                         <span className={style.mark}>&#62;</span>
                                         <span className={style.text}>{logoText}</span>
-                                        <span className={style.cursor} />
+                                        &nbsp;
+                                        <img
+                                            src={require('../../static/octocat.png')}
+                                            style={{width: '25px', height: '25px'}}
+                                        />
                                     </>
                                 )}
                         </div>
