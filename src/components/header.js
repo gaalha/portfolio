@@ -28,13 +28,13 @@ const Header = props => {
                                 <img src={siteLogo.src} alt={siteLogo.alt} />
                             ) : (
                                     <>
-                                        <span className={style.mark}>&#62;</span>
-                                        <span className={style.text}>{logoText}</span>
-                                        &nbsp;
+                                        {/*<span className={style.mark}>&#62;</span>*/}
                                         <img
                                             src={require('../../static/octocat.png')}
                                             style={{width: '25px', height: '25px'}}
                                         />
+                                        &nbsp;
+                                        <span className={style.text}>{logoText}</span>
                                     </>
                                 )}
                         </div>

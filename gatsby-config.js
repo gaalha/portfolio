@@ -15,7 +15,7 @@ module.exports = {
             src: '',
             alt: '',
         },
-        logoText: 'edgarmejia.github.io',
+        logoText: 'soda@root',
         defaultTheme: '',
         postsPerPage: 6,
         showMenuItems: 3,
