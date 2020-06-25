@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import Icon from './icon'
+import { FaMoon } from 'react-icons/fa';
+import { FiSun } from 'react-icons/fi';
 import style from '../styles/menu.module.css'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { Helmet } from 'react-helmet'
-import { includes } from 'rambdax'
-
 
 const MainMenu = ({ mainMenu, mainMenuItems, isMobileMenu }) => {
     const menu = mainMenu.slice(0)
@@ -120,11 +120,11 @@ const Menu = ({
                         <Helmet>
                             <body className={theme}/>
                         </Helmet>
-
-                        <img style={{ cursor: `pointer` }} src={
-                            (theme === 'dark') ? require('../images/sun.svg')
-                                : require('../images/moon.svg')
-                        }/>
+                        {theme === 'dark' ? (
+                            <FiSun size="18" style={{ cursor: 'pointer' }} />
+                        ) : (
+                            <FaMoon size="18" style={{ cursor: 'pointer' }} />
+                        )}
                     </div>
                 )}
             </ThemeToggler>

@@ -16,7 +16,7 @@ module.exports = {
             alt: '',
         },
         logoText: 'edgarmejia.github.io',
-        defaultTheme: 'dark',
+        defaultTheme: '',
         postsPerPage: 6,
         showMenuItems: 3,
         menuMoreText: 'Show more',
