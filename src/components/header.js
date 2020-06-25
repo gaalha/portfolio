@@ -13,8 +13,7 @@ const Header = props => {
         mainMenuItems,
         menuMoreText,
     } = props
-    const currentTheme = (typeof window !== 'undefined' && window.localStorage.getItem('theme')) ||
-    null
+    const currentTheme = (typeof window !== 'undefined' && window.localStorage.getItem('theme')) || 'light'
     const [isMobileMenuVisible, toggleMobileMenu] = useState(false)
     const [isSubMenuVisible, toggleSubMenu] = useState(false)
     const onToggleMobileMenu = () => toggleMobileMenu(!isMobileMenuVisible)
@@ -24,9 +23,7 @@ const Header = props => {
         <>
             <Helmet>
                 <body
-                    className={
-                        currentTheme ? currentTheme : 'light'
-                    }
+                    className={currentTheme}
                 />
             </Helmet>
             <header className={style.header}>

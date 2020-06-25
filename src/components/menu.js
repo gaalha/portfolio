@@ -108,20 +108,24 @@ const Menu = ({
                             ) : null}
                         </>
                     ) : null}
-                    {/*<li ></li>*/}
                 </ul>
             </div>
             <ThemeToggler>
                 {({ theme, toggleTheme }) => (
-                    <span
+                    <div
                         style={{margin: `3px 4px 0 4px`}}
-                        onClick={e => toggleTheme(theme === 'light' ? 'dark' : 'light')}>
+                        onClick={e => toggleTheme(theme === 'light' ? 'dark' : 'light')}
+                    >
                         {theme === "dark" ? (
-                            <FiSun size="18" style={{ cursor: 'pointer' }} />
+                            <>
+                                <FiSun size="18" style={{ cursor: 'pointer' }} />
+                            </>
                         ) : (
-                            <FaMoon size="18" style={{ cursor: 'pointer' }} />
+                            <>
+                                <FaMoon size="18" style={{ cursor: 'pointer' }} />
+                            </>
                         )}
-                    </span>
+                    </div>
                 )}
             </ThemeToggler>
         </>
