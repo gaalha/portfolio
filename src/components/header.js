@@ -13,7 +13,8 @@ const Header = props => {
         mainMenuItems,
         menuMoreText,
     } = props
-    const currentTheme = window.localStorage.getItem('theme')
+    const currentTheme = (typeof window !== 'undefined' && window.localStorage.getItem('theme')) ||
+    null
     const [isMobileMenuVisible, toggleMobileMenu] = useState(false)
     const [isSubMenuVisible, toggleSubMenu] = useState(false)
     const onToggleMobileMenu = () => toggleMobileMenu(!isMobileMenuVisible)
