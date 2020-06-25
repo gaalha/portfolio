@@ -6,6 +6,7 @@ import { FaMoon } from 'react-icons/fa';
 import { FiSun } from 'react-icons/fi';
 import style from '../styles/menu.module.css'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import { Helmet } from 'react-helmet'
 
 const MainMenu = ({ mainMenu, mainMenuItems, isMobileMenu }) => {
     const menu = mainMenu.slice(0)
@@ -114,14 +115,17 @@ const Menu = ({
                 {({ theme, toggleTheme }) => (
                     <div
                         style={{margin: `3px 4px 0 4px`}}
-                        onClick={e => toggleTheme(theme === 'light' ? 'dark' : 'light')}
+                        onClick={e => toggleTheme((theme === 'light') ? 'dark' : 'light')}
                     >
-                        {/*theme === "dark" ? (
+                        <Helmet>
+                            <body className={theme}/>
+                        </Helmet>
+
+                        {theme === "dark" ? (
                             <FiSun size="18" style={{ cursor: 'pointer' }} />
                         ) : (
                             <FaMoon size="18" style={{ cursor: 'pointer' }} />
-                        )*/}
-                        {theme}
+                        )}
                     </div>
                 )}
             </ThemeToggler>

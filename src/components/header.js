@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { Helmet } from 'react-helmet'
 import Menu from './menu'
 import style from '../styles/header.module.css'
 
@@ -13,7 +12,7 @@ const Header = props => {
         mainMenuItems,
         menuMoreText,
     } = props
-    const currentTheme = (typeof window !== 'undefined' && window.localStorage.getItem('theme')) || 'light'
+
     const [isMobileMenuVisible, toggleMobileMenu] = useState(false)
     const [isSubMenuVisible, toggleSubMenu] = useState(false)
     const onToggleMobileMenu = () => toggleMobileMenu(!isMobileMenuVisible)
@@ -21,11 +20,6 @@ const Header = props => {
 
     return (
         <>
-            <Helmet>
-                <body
-                    className={currentTheme}
-                />
-            </Helmet>
             <header className={style.header}>
                 <div className={style.inner}>
                     <Link to="/">
