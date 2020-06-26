@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
     } = data.site.siteMetadata
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid p-0 m-0">
             <Header
                 siteTitle={title}
                 siteLogo={logo}
@@ -52,8 +52,8 @@ const Layout = ({ children }) => {
                 mainMenuItems={showMenuItems}
                 menuMoreText={menuMoreText}
             />
-            <div className="container">
-                <div className="row">
+            <div className="container mx-auto">
+                <div className="row mx-auto">
                     {children}
                 </div>
             </div>

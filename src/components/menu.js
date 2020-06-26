@@ -118,7 +118,7 @@ const Menu = ({
                             <h2 style={{
                                 padding: `0`,
                                 margin: `0`,
-                                marginTop: `-10px`,
+                                marginTop: `-7px`,
                                 textShadow: `rgba(253, 252, 252, 0.51) 0px 0px 3px`,
                             }}>
                                 🌞
@@ -127,7 +127,7 @@ const Menu = ({
                             <h2 style={{
                                 padding: `0`,
                                 margin: `0`,
-                                marginTop: `-10px`,
+                                marginTop: `-7px`,
                                 textShadow: `rgba(0, 0, 0, 0.51) 0px 0px 9px`,
                             }}>
                                 🌚

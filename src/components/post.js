@@ -22,7 +22,7 @@ const Post = ({
     const nextLabel = nextPost && nextPost.frontmatter.title
 
     return (
-        <div className={`${style.post} ${style.onIndex} mt-5 mb-4`}>
+        <div className={`${style.post} ${style.onIndex} mt-4 mb-5`}>
             <div className={style.postContent}>
                 <h1 className={style.title}>
                     {excerpt ? <Link to={path}># {title}</Link> : title}
