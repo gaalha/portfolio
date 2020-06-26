@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import Icon from './icon'
-import { FaMoon } from 'react-icons/fa';
-import { FiSun } from 'react-icons/fi';
 import style from '../styles/menu.module.css'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 
@@ -116,7 +114,25 @@ const Menu = ({
                         style={{margin: `3px 4px 0 4px`, cursor: `pointer`}}
                         onClick={e => toggleTheme((theme === 'light') ? 'dark' : 'light')}
                     >
-                        {theme === 'dark' ? (<FiSun />) : (<FaMoon />)}
+                        {theme === 'dark' ? (
+                            <h2 style={{
+                                padding: `0`,
+                                margin: `0`,
+                                marginTop: `-10px`,
+                                textShadow: `rgba(253, 252, 252, 0.51) 0px 0px 3px`,
+                            }}>
+                                🌞
+                            </h2>
+                        ) : (
+                            <h2 style={{
+                                padding: `0`,
+                                margin: `0`,
+                                marginTop: `-10px`,
+                                textShadow: `rgba(0, 0, 0, 0.51) 0px 0px 9px`,
+                            }}>
+                                🌚
+                            </h2>
+                        )}
                     </div>
                 )}
             </ThemeToggler>

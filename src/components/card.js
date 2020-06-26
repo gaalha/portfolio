@@ -15,19 +15,6 @@ const Card = ({
         <BackgroundImage
             fluid={coverImage.childImageSharp.fluid}
             className="sexy-card"
-            style={{
-                elevation: `10`,
-                width: `315px`,
-                height: `280px`,
-                borderRadius: `14px`,
-                overflow: `hidden`,
-                margin: `20px 10px`,
-                boxShadow: `5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22)`,
-                cursor: `pointer`,
-                transformOrigin: `center`,
-                transition: `filter 200ms linear, transform 200ms linear`,
-                position: `relative`,
-            }}
         >
             <Content>
                 <Title>{title}</Title>

@@ -3,113 +3,62 @@
 @import "./variables.css";
 @import "./prism.css";
 
-body a:hover {
-    text-decoration: none !important;
-}
-
-body a {
-    text-decoration: none !important;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
+*,*:before,*:after {box-sizing: inherit;}
+a {text-decoration: none !important;}
+a:hover{text-decoration: none !important;}
 
 body {
-    margin                    : 0;
-    padding                   : 0;
-    font-family               : 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
-    font-size                 : 1rem;
-    font-weight               : 600;
-    line-height               : 1.54;
-    background-color          : var(--light-background);
-    color                     : var(--light-color);
-    text-rendering            : optimizeLegibility;
-    -webkit-font-smoothing    : antialiased;
-    font-feature-settings     : "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.54;
+    background-color: var(--light-background);
+    color: var(--light-color);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
     -webkit-overflow-scrolling: touch;
-    -webkit-text-size-adjust  : 100%;
+    -webkit-text-size-adjust: 100%;
     transition: background-color 0.3s, color 0.3s;
 
-    @media (--phone) {
-        font-size: 1rem;
-    }
+    @media (--phone) {font-size: 1rem;}
 
     &.dark {
         /* background-color: var(--dark-background); */
         background: linear-gradient(rgba(130, 46, 96, 0.49) 0%, rgba(0, 0, 0, 0) 100%);
         background-color: #292a2d;
-        color           : var(--dark-color);
+        color: var(--dark-color);
+
+        .sexy-card {box-shadow: inset -11px 15px 30px 7px hsla(0,0%,100%,.25), 0 0 20px 0px rgba(160,137,137,.22);}
     }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    display    : flex;
-    align-items: center;
-    line-height: 1.3;
-}
 
-h1 {
-    font-size: 2.625rem;
-}
 
-h2 {
-    font-size: 1.625rem;
-}
-
-h3 {
-    font-size: 1.375rem;
-}
-
-h4 {
-    font-size: 1.125rem;
-}
+h1,h2,h3,h4,h5,h6 {display: flex; align-items: center;line-height: 1.3;}
+h1 {font-size: 2.625rem;}
+h2 {font-size: 1.625rem;}
+h3 {font-size: 1.375rem;}
+h4 {font-size: 1.125rem;}
 
 @media (--phone) {
-    h1 {
-        font-size: 2rem;
-    }
+    h1 {font-size: 2rem;}
 
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    h3 {
-        font-size: 1.15rem;
-    }
-
-    h4 {
-        font-size: 1.125rem;
-    }
+    h2 {font-size: 1.4rem;}
+    h3 {font-size: 1.15rem;}
+    h4 {font-size: 1.125rem;}
 }
 
-a {
-    color: inherit;
-}
+a {color: inherit;}
 
 img {
     display  : block;
     max-width: 100%;
-
-    &.left {
-        margin-right: auto;
-    }
-
-    &.center {
-        margin-left : auto;
-        margin-right: auto;
-    }
-
-    &.right {
-        margin-left: auto;
-    }
+    &.left {margin-right: auto;}
+    &.center {margin-left : auto;margin-right: auto;}
+    &.right {margin-left: auto;}
 }
 
 figure {
@@ -350,6 +299,19 @@ footer {
             }
         }
     }
+}
+/* inset rgba(255, 255, 255, 0.25) 2px 5px 30px 7px, rgba(160, 137, 137, 0.22) -5px -5px 30px 7px */
+.sexy-card {
+    width: 315px;
+    height: 280px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 20px 10px;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    cursor: pointer;
+    transform-origin: center;
+    transition: filter 200ms linear, transform 200ms linear;
+    position: relative;
 }
 
 .sexy-card:hover {
