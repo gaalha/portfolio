@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
                 mainMenuItems={showMenuItems}
                 menuMoreText={menuMoreText}
             />
-            <div className="container mx-auto">
+            <div className="container mx-auto mt-4 mb-5">
                 <div className="row mx-auto">
                     {children}
                 </div>

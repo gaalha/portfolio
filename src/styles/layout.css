@@ -181,6 +181,13 @@ hr {
     iframe {position: absolute;top: 0;left: 0;width: 100%;height: 100%;border: 0;}
 }
 
+footer {
+    font-size    : 1rem;
+    text-align   : center;
+    margin-bottom: 50px;
+    @media (--phone) {display: flex;flex-direction: column;}
+}
+
 .sexy-card {
     width: 315px;
     height: 280px;
