@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import Icon from './icon'
 import style from '../styles/menu.module.css'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import styled from 'styled-components';
 
 const MainMenu = ({ mainMenu, mainMenuItems, isMobileMenu }) => {
     const menu = mainMenu.slice(0)
@@ -108,32 +109,14 @@ const Menu = ({
                     ) : null}
                 </ul>
             </div>
+
             <ThemeToggler>
                 {({ theme, toggleTheme }) => (
-                    <div
-                        style={{margin: `3px 4px 0 4px`, cursor: `pointer`}}
-                        onClick={e => toggleTheme((theme === 'light') ? 'dark' : 'light')}
-                    >
-                        {theme === 'dark' ? (
-                            <h2 style={{
-                                padding: `0`,
-                                margin: `0`,
-                                marginTop: `-7px`,
-                                textShadow: `rgba(253, 252, 252, 0.51) 0px 0px 3px`,
-                            }}>
-                                🌞
-                            </h2>
-                        ) : (
-                            <h2 style={{
-                                padding: `0`,
-                                margin: `0`,
-                                marginTop: `-7px`,
-                                textShadow: `rgba(0, 0, 0, 0.51) 0px 0px 9px`,
-                            }}>
-                                🌚
-                            </h2>
-                        )}
-                    </div>
+                    <Toggler onClick={
+                        e => toggleTheme((theme === 'light') ? 'dark' : 'light')
+                    }>
+                        {theme === 'dark' ? (<Emoji isDark={true} />) : (<Emoji isDark={false} />)}
+                    </Toggler>
                 )}
             </ThemeToggler>
         </>
@@ -167,3 +150,24 @@ SubMenu.propTypes = {
 }
 
 export default Menu
+
+export const MobileMenuContainer = styled.div``;
+
+export const DesktopMenuContainer = styled.div``;
+
+export const Toggler = styled.div`
+    margin: 3px 4px 0 4px;
+    cursor: pointer;
+`;
+
+export const Emoji = styled.h2`
+    padding: 0;
+    margin: -5px 0 2px 0;
+    text-shadow: ${props => (
+        props.isDark ? `rgba(253, 252, 252, 0.51) 0px 0px 3px;`
+            :`rgba(0, 0, 0, 0.51) 0px 0px 9px;`
+    )}
+    &:before {
+        content: ${props => (props.isDark ? `'🌞';` : `'🌚';`)};
+    }
+`;

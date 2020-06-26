@@ -11,16 +11,16 @@ const Card = ({
     coverImage,
     author
 }) => (
-    <BackgroundImage fluid={coverImage.childImageSharp.fluid} className="sexy-card">
-        <Link to={path}>
-            <Content>
-                <Title>{title}</Title>
-                <Subtitle>
-                    {subtitle} {author && <>— Written by {author}</>}
-                </Subtitle>
-            </Content>
-        </Link>
-    </BackgroundImage>
+    <Link to={path}>
+        <BackgroundImage fluid={coverImage.childImageSharp.fluid} className="sexy-card mx-auto">
+                <Content>
+                    <Title>{title}</Title>
+                    <Subtitle>
+                        {subtitle} {author && <>— Written by {author}</>}
+                    </Subtitle>
+                </Content>
+        </BackgroundImage>
+    </Link>
 );
 
 Card.propTypes = {
