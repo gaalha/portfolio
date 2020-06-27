@@ -37,7 +37,7 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
                 title={title}
                 coverImage={coverImage}
                 caption={title}
-                subtitle={`${date} — by ${author}`}
+                subtitle={`${date}, by ${author}`}
               />
             </div>
           )
@@ -75,7 +75,7 @@ export const postsQuery = graphql`
           excerpt
           frontmatter {
             title
-            date(formatString: "DD MMMM YYYY")
+            date(formatString: "DD/MM/YYYY")
             path
             author
             excerpt
