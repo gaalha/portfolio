@@ -1,69 +1,68 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
-
 import Header from './header'
 import Footer from './footer'
-
 import '../styles/layout.css'
 
 const Layout = ({ children }) => {
-    const data = useStaticQuery(graphql`
-        query SiteTitleQuery {
-            site {
-                siteMetadata {
-                    title
-                    logo {
-                        src
-                        alt
-                    }
-                    logoText
-                    defaultTheme
-                    copyrights
-                    mainMenu {
-                        title
-                        path
-                    }
-                    showMenuItems
-                    menuMoreText
-                }
-            }
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+          logo {
+            src
+            alt
+          }
+          logoText
+          defaultTheme
+          copyrights
+          mainMenu {
+            title
+            path
+          }
+          showMenuItems
+          menuMoreText
         }
-    `)
-    const {
-        title,
-        logo,
-        logoText,
-        defaultTheme,
-        mainMenu,
-        showMenuItems,
-        menuMoreText,
-        copyrights,
-    } = data.site.siteMetadata
+      }
+    }
+  `)
 
-    return (
-        <div className="container-fluid p-0 m-0">
-            <Header
-                siteTitle={title}
-                siteLogo={logo}
-                logoText={logoText}
-                defaultTheme={defaultTheme}
-                mainMenu={mainMenu}
-                mainMenuItems={showMenuItems}
-                menuMoreText={menuMoreText}
-            />
-            <div className="container mx-auto mt-4 mb-5">
-                <div className="row">
-                    {children}
-                </div>
-            </div>
-            <Footer copyrights={copyrights} />
+  const {
+    title,
+    logo,
+    logoText,
+    defaultTheme,
+    mainMenu,
+    showMenuItems,
+    menuMoreText,
+    copyrights,
+  } = data.site.siteMetadata
+
+  return (
+    <div className="container-fluid p-0 m-0">
+      <Header
+        siteTitle={title}
+        siteLogo={logo}
+        logoText={logoText}
+        defaultTheme={defaultTheme}
+        mainMenu={mainMenu}
+        mainMenuItems={showMenuItems}
+        menuMoreText={menuMoreText}
+      />
+      <div className="container mx-auto mt-4 mb-5">
+        <div className="row">
+          {children}
         </div>
-    )
+      </div>
+      <Footer copyrights={copyrights} />
+    </div>
+  )
 }
 
 Layout.propTypes = {
-    children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout

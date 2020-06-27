@@ -14,18 +14,18 @@ import Img from 'gatsby-image'
  */
 
 const Image = () => {
-    const data = useStaticQuery(graphql`
-        query {
-            placeholderImage: file(relativePath: { eq: "images" }) {
-                childImageSharp {
-                    fluid(maxWidth: 800) {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
-            }
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "images" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
+          }
         }
-    `)
-    return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+      }
+    }
+  `)
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
 export default Image

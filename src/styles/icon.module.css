@@ -1,16 +1,16 @@
 .root {
-    display        : inline-flex;
-    align-items    : center;
-    justify-content: center;
+  display        : inline-flex;
+  align-items    : center;
+  justify-content: center;
 }
 
 .icon {
-    fill: currentColor;
+  fill: currentColor;
 }
 
 .label {
-    position   : relative;
-    display    : inline-block;
-    margin-left: 4px;
-    line-height: 1;
+  position   : relative;
+  display    : inline-block;
+  margin-left: 4px;
+  line-height: 1;
 }
