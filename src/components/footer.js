@@ -13,17 +13,15 @@ const Footer = ({ copyrights }) => (
     ) : (
       <>
         <Item>
-          © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a>
+          &copy; {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a>
         </Item>
         <Item>
           Made by <a href="https://github.com/edgarMejia" target="_blank" rel="noopener noreferrer">Edgar Mejía</a>
         </Item>
         <Item>
-          <a href="https://twitter.com/edgar_mmejia" target="_blank" rel="noopener noreferrer">Twitter</a>
-          &nbsp;•&nbsp;
-          <a href="https://github.com/edgarMejia" target="_blank" rel="noopener noreferrer">GitHub</a>
-          &nbsp;•&nbsp;
-          <a href="https://stackoverflow.com/users/9200447" target="_blank" rel="noopener noreferrer">StackOverflow</a>
+          <SubItem href="https://twitter.com/edgar_mmejia" target="_blank" rel="noopener noreferrer">Twitter</SubItem>
+          <SubItem href="https://github.com/edgarMejia" target="_blank" rel="noopener noreferrer">GitHub</SubItem>
+          <SubItem href="https://stackoverflow.com/users/9200447" target="_blank" rel="noopener noreferrer">StackOverflow</SubItem>
         </Item>
       </>
     )}
@@ -40,6 +38,14 @@ const Item = styled.span`
   &:not(:first-of-type) {
     margin-left: 20px;
     padding-left: 20px;
-    border-left: 1px solid;
+    @media (min-width: 576px) {
+      border-left: 1px solid;
+    }
+  }
+`
+
+const SubItem = styled.a`
+  &:not(:last-child):after {
+    content: ' • '
   }
 `
