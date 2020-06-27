@@ -1,5 +1,5 @@
 ---
-title: "Nani.ninja 👍🏼"
+title: "Nani.ninja 🇯🇵 for Crunchyroll, thats the way"
 path: "/post/090520200306"
 date: "2020-06-23"
 coverImage: ../images/nani.jpeg

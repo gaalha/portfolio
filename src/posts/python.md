@@ -1,5 +1,5 @@
 ---
-title: "Mi experiencia con Python"
+title: "My experience with Python 🐍"
 path: "/post/090520200309"
 date: "2020-05-09"
 coverImage: ../images/pymin.jpg

@@ -1,5 +1,5 @@
 ---
-title: "Bienvenido a 2014 iOS 🎉"
+title: "Welcome to 2014 iOS 🎉"
 path: "/post/090520283048"
 date: "2020-06-24"
 coverImage: ../images/ios14min.jpg
