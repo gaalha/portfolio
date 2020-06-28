@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-friend",
+  "name": "edgarmejia.github.io",
   "description": "A simple blog with Gatsby. That's it.",
-  "version": "0.6.1",
+  "version": "0.6.3",
   "author": "Edgar Mejía <edgar13155@gmail.com>",
   "keywords": [
     "gatsby",
@@ -16,7 +16,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby clean && gatsby develop",
+    "dev": "rm -rf .cache && gatsby clean && gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },

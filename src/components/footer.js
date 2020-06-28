@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import ExternalLink from './external'
 
 const Footer = ({ copyrights }) => (
   <footer>
@@ -13,15 +14,19 @@ const Footer = ({ copyrights }) => (
     ) : (
       <>
         <Item>
-          &copy; {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a>
+          &copy; {new Date().getFullYear()}, Built with
+          <ExternalLink link="https://www.gatsbyjs.org" text="Gatsby" />
         </Item>
         <Item>
-          Made by <a href="https://github.com/edgarMejia" target="_blank" rel="noopener noreferrer">Edgar Mejía</a>
+          Made by
+          <ExternalLink link="https://github.com/edgarMejia" text="Edgar Mejía" />
         </Item>
         <Item>
-          <SubItem href="https://twitter.com/edgar_mmejia" target="_blank" rel="noopener noreferrer">Twitter</SubItem>
-          <SubItem href="https://github.com/edgarMejia" target="_blank" rel="noopener noreferrer">GitHub</SubItem>
-          <SubItem href="https://stackoverflow.com/users/9200447" target="_blank" rel="noopener noreferrer">StackOverflow</SubItem>
+          <ExternalLink link="https://twitter.com/edgar_mmejia" text="Twitter" />
+          <span> • </span>
+          <ExternalLink link="https://github.com/edgarMejia" text="GitHub" />
+          <span> • </span>
+          <ExternalLink link="https://stackoverflow.com/users/9200447" text="StackOverflow" />
         </Item>
       </>
     )}
@@ -41,11 +46,5 @@ const Item = styled.span`
     @media (min-width: 576px) {
       border-left: 1px solid;
     }
-  }
-`
-
-const SubItem = styled.a`
-  &:not(:last-child):after {
-    content: ' • '
   }
 `
