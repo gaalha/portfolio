@@ -1,6 +1,6 @@
+@import "./variables.css";
 @import '../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
 @import "./fonts.css";
-@import "./variables.css";
 @import "./prism.css";
 
 *,

@@ -60,6 +60,7 @@ const Container = styled.div`
     transform: scale(1.05) translateZ(0);
     transform-origin: center;
     transition: filter 200ms linear, transform 200ms linear;
+    ${Image} {filter: blur(0px);}
   }
 `
 
@@ -71,13 +72,6 @@ const Content = styled.div`
   top: 0;
   padding: 30px 24px;
   background-color: #08070738;
-  &:hover {
-    //transition: background-color 0.3s ease;
-    //background-color: transparent;
-    ${Image} {
-      filter: none;
-    }
-  }
 `
 
 const Title = styled.h1`
@@ -86,10 +80,10 @@ const Title = styled.h1`
   font-weight: bold;
   margin: 10px 0 0 20px;
   width: 200px;
+  text-shadow: 0 0 18px #0000005c, 0 0 10px #0000005c;
 `
 
 const Subtitle = styled.p`
   color: white;
   margin: 0 0 0 20px;
 `
-

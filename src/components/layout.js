@@ -41,23 +41,25 @@ const Layout = ({ children }) => {
   } = data.site.siteMetadata
 
   return (
-    <div className="container-fluid p-0 m-0">
-      <Header
-        siteTitle={title}
-        siteLogo={logo}
-        logoText={logoText}
-        defaultTheme={defaultTheme}
-        mainMenu={mainMenu}
-        mainMenuItems={showMenuItems}
-        menuMoreText={menuMoreText}
-      />
-      <div className="container mx-auto mt-4 mb-5">
-        <div className="row pl-3 pr-3">
-          {children}
+    <>
+      <div className="container-fluid p-0 m-0">
+        <Header
+          siteTitle={title}
+          siteLogo={logo}
+          logoText={logoText}
+          defaultTheme={defaultTheme}
+          mainMenu={mainMenu}
+          mainMenuItems={showMenuItems}
+          menuMoreText={menuMoreText}
+        />
+        <div className="container mx-auto mt-4 mb-5">
+          <div className="row pl-3 pr-3">
+            {children}
+          </div>
         </div>
+        <Footer copyrights={copyrights} />
       </div>
-      <Footer copyrights={copyrights} />
-    </div>
+    </>
   )
 }
 
