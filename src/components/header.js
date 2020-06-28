@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
 import Menu from './menu'
-import style from '../styles/header.module.css'
 
 const Header = props => {
   const {
@@ -20,10 +20,10 @@ const Header = props => {
 
   return (
     <>
-      <header className={style.header}>
-        <div className={style.inner}>
+      <HeaderContainer>
+        <Inner>
           <Link to="/">
-            <div className={style.logo}>
+            <Logo>
               {siteLogo.src ? (
                 <img src={siteLogo.src} alt={siteLogo.alt} />
               ) : (
@@ -34,12 +34,13 @@ const Header = props => {
                     alt="Hi 👋🏼"
                   />
                   &nbsp;
-                  <span className={style.text}>{logoText}</span>
+                  <Text>{logoText}</Text>
                 </>
               )}
-            </div>
+            </Logo>
           </Link>
-          <span className={style.right}>
+
+          <Right>
             <Menu
               mainMenu={mainMenu}
               mainMenuItems={mainMenuItems}
@@ -49,9 +50,9 @@ const Header = props => {
               onToggleMobileMenu={onToggleMobileMenu}
               onToggleSubMenu={onToggleSubMenu}
             />
-          </span>
-        </div>
-      </header>
+          </Right>
+        </Inner>
+      </HeaderContainer>
     </>
   )
 }
@@ -71,3 +72,50 @@ Header.propTypes = {
 }
 
 export default Header
+
+const HeaderContainer = styled.header`
+  background: #fafafa;
+  transition: background-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px;
+
+  .dark & {
+    background: transparent;
+  }
+
+  a {
+    text-decoration: none;
+  }
+`
+
+const Inner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 90%;
+`
+
+const Logo = styled.div`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+
+  & img {
+    height: 44px;
+  }
+`
+
+const Text = styled.span`
+  font-size: 18px;
+`
+
+const Right = styled.span`
+  display : flex;
+  position: relative;
+`
