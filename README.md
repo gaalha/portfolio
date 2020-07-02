@@ -1,7 +1,7 @@
 <h2 align="center">edgarmejia.github.io 👻</h2>
 
 <p align="center">
-  <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/edgarMejia/edgarmejia.github.io/Deploy website?style=flat-square">
+  <img alt="Netlify" src="https://img.shields.io/netlify/383c678e-2cda-4d25-8140-0e45ce1f436a?style=flat-square">
   <a href="https://github.com/edgarMejia/edgarmejia.github.io/blob/source/LICENSE">
     <img alt="GitHub license" src="https://img.shields.io/github/license/edgarMejia/edgarmejia.github.io?style=flat-square">
   </a>
