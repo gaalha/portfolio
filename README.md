@@ -16,7 +16,7 @@
 
 ## Features
 
-- i18n (German & English)
+- i18n (Spanish & English)
 - Gatsby-Image (Responsive images)
 - Tags & Categories
 - PWA
