@@ -96,7 +96,7 @@ const Menu = ({
       <ThemeToggler>
         {({ theme, toggleTheme }) => (
           <Toggler onClick={() => toggleTheme((theme === 'light') ? 'dark' : 'light')}>
-            {theme === 'dark' ? (<Emoji isDark={true} />) : (<Emoji isDark={false} />)}
+            {theme === 'dark' ? (<Emoji isDark={true}>🌞</Emoji>) : (<Emoji isDark={false}>🌚</Emoji>)}
           </Toggler>
         )}
       </ThemeToggler>
@@ -299,7 +299,4 @@ export const Emoji = styled.h2`
     props.isDark ? `rgba(253, 252, 252, 0.51) 0px 0px 3px;` :
       `rgba(0, 0, 0, 0.51) 0px 0px 9px;`
   )}
-  &:before {
-    content: ${props => (props.isDark ? `'🌞';` : `'🌚';`)};
-  }
 `

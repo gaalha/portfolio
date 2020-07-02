@@ -1,12 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Post from '../components/post'
 import Navigation from '../components/navigation'
-
-import '../styles/layout.css'
 
 const Tags = ({
   data,
@@ -20,9 +19,9 @@ const Tags = ({
     <>
       <SEO />
       <Layout>
-        <div className="infoBanner">
+        <InfoBanner>
           Posts with tag: <span>#{tag}</span>
-        </div>
+        </InfoBanner>
 
         {posts.map(({ node }) => {
           const {
@@ -72,6 +71,23 @@ Tags.propTypes = {
     tag: PropTypes.string,
   }),
 }
+
+const InfoBanner = styled.div`
+  text-align: left;
+  margin: 20px 0 40px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: calc(100% - 40px);
+  background: #eaeaea;
+
+  .dark & {
+    background: #3b3d42;
+  }
+
+  span {
+    font-weight: bold;
+  }
+`
 
 export const postsQuery = graphql`
   query($limit: Int!, $skip: Int!, $tag: String!) {
