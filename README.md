@@ -1,4 +1,4 @@
-<h2 align="center">edgarmejia.github.io 👻</h2>
+<h2 align="center">edgarmejia.dev 👻</h2>
 
 <p align="center">
   <img alt="👋🏼" src="https://raw.githubusercontent.com/edgarMejia/edgarmejia.dev/master/screenshots/ss1.png">
