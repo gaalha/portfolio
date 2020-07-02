@@ -5711,10 +5711,10 @@ gatsby-plugin-manifest@^2.0.9:
     bluebird "^3.5.0"
     sharp "^0.21.3"
 
-gatsby-plugin-nprogress@^2.3.1:
-  version "2.3.6"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.3.6.tgz#84622cf5c286811184821ea7882ad0738b170da5"
-  integrity sha512-0RaEBpY4PgwFxzhSNhD5iIj8tAf7MsnFBcYRVZnpB4xF65kMFx8L4JVi4CS8ZrMHSDtiVehJlTLE48sAKgskTQ==
+gatsby-plugin-nprogress@^2.3.8:
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.3.8.tgz#d602c0b0c0c5f1e27a2231557e12143cc0211a13"
+  integrity sha512-sv5QQ1qlThkzHFINeAeg3/QNzcTrmRzbE943Alx4CeLj8C6w7RZvbeJGfiZiHCaZxcO79zSedGGnOY9gDrcDlg==
   dependencies:
     "@babel/runtime" "^7.10.3"
     nprogress "^0.2.0"
