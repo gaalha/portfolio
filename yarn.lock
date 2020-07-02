@@ -10527,10 +10527,10 @@ raf@^3.4.1:
   dependencies:
     performance-now "^2.1.0"
 
-rambdax@^1.8.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-1.9.0.tgz#ff35fd91368fa83d75bc5206b9d7e892752aa406"
-  integrity sha512-fpYhT2mrUejiAsHXKsU/suvJeosyCCpT6MKXg8bFs1ZclbWrxctO8x3dEMJrsvvH2cPQDhSn1WofRHsPmg4jLA==
+rambdax@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-3.7.0.tgz#bc89ced092f95521555eb24fe0a29039807a4756"
+  integrity sha512-EaV46HD0sqoFGmm0BT7cMSUXJw0l+iMCH52CkhAuByJNLC+WXE13KgxRd5UsnwdLg/tEskgPADYacOuR0zVa9Q==
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
