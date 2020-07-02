@@ -5,7 +5,7 @@ author: "Edgar Mejía"
 path: "/thanks"
 ---
 
-## Page base on:
+## Page based on:
 - Repo: https://github.com/panr/gatsby-starter-hello-friend
 - Demo: https://gatsby-hello-friend.now.sh/
 
