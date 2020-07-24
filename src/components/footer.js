@@ -18,7 +18,7 @@ const Footer = ({ copyrights }) => (
           <ExternalLink link="https://www.gatsbyjs.org" text="Gatsby" />
         </Item>
         <Item>
-          Made by
+          Made by&nbsp;
           <ExternalLink link="https://github.com/edgarMejia" text="Edgar Mejía" />
         </Item>
         <Item>

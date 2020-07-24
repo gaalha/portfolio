@@ -7,7 +7,7 @@ const postCSSMixins = require('postcss-mixins')
 
 module.exports = {
   siteMetadata: {
-    title: `edgarmejia.github.io`,
+    title: `edgarmejia.com`,
     description: `This is my personal site, made with Gatsby`,
     copyrights: '',
     author: `@edgarmejia`,
@@ -15,7 +15,7 @@ module.exports = {
       src: '',
       alt: '',
     },
-    logoText: 'soda@root',
+    logoText: 'edgarmejia.com',
     defaultTheme: '',
     postsPerPage: 6,
     showMenuItems: 3,
@@ -74,31 +74,30 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-embed-video',
-            options: {
-              related: false,
-              noIframeBorder: true,
-            },
+        plugins: [{
+          resolve: 'gatsby-remark-embed-video',
+          options: {
+            related: false,
+            noIframeBorder: true,
           },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              quality: 100,
-            },
+        },
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            maxWidth: 800,
+            quality: 100,
           },
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: false,
-            },
+        },
+        {
+          resolve: `gatsby-remark-prismjs`,
+          options: {
+            classPrefix: 'language-',
+            inlineCodeMarker: null,
+            aliases: {},
+            showLineNumbers: false,
+            noInlineHighlight: false,
           },
+        },
         ],
       },
     },
