@@ -14,19 +14,14 @@ const Footer = ({ copyrights }) => (
     ) : (
       <>
         <Item>
-          &copy; {new Date().getFullYear()}, Built with
+          &copy; { new Date().getFullYear() }, Built with&nbsp;
           <ExternalLink link="https://www.gatsbyjs.org" text="Gatsby" />
         </Item>
         <Item>
-          Made by&nbsp;
-          <ExternalLink link="https://github.com/edgarMejia" text="Edgar Mejía" />
-        </Item>
-        <Item>
-          <ExternalLink link="https://twitter.com/edgar_mmejia" text="Twitter" />
-          <span> • </span>
-          <ExternalLink link="https://github.com/edgarMejia" text="GitHub" />
-          <span> • </span>
-          <ExternalLink link="https://stackoverflow.com/users/9200447" text="StackOverflow" />
+          <ExternalLink
+            link="https://github.com/edgarMejia/edgarmejia.com"
+            text="Source of this page"
+          />
         </Item>
       </>
     )}

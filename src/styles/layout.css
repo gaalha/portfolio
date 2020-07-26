@@ -328,7 +328,14 @@ hr {
 footer {
   font-size    : 1rem;
   text-align   : center;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
+  background-image: linear-gradient(#fff, #fbbcdb);
+  height: 100px;
+  padding-top: 42px;
+
+  .dark & {
+    background: linear-gradient(#292a2d, #54233b);
+  }
 
   @media (--phone) {
     display       : flex;

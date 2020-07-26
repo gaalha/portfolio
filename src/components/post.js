@@ -75,7 +75,7 @@ const PostContontainer = styled.div`
   margin: 0 auto 20px;
   position: relative;
 
-  @media (max-width: 900px) { // --tablet
+  @media (max-width: 900px) {
     max-width: 660px;
   }
 
