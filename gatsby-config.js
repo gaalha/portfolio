@@ -22,7 +22,6 @@ module.exports = {
     menuMoreText: 'Show more',
     mainMenu: [
       { title: 'My repos', path: '/repos' },
-      { title: 'About', path: '/about' },
       { title: 'Thanks', path: '/thanks' },
     ],
   },
