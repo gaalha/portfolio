@@ -41,7 +41,7 @@ const Image = styled(Img)`
   top: 0;
   width: 100%;
   height: 100%;
-  filter: blur(1.5px);
+  /* filter: blur(1.5px); */
 `
 
 const Container = styled.div`
