@@ -246,7 +246,7 @@ export const SubMenuContainer = styled.ul`
   z-index: 99;
 
   .dark & {
-    // background: var(--dark-background-secondary);
+    /* background: var(--dark-background-secondary); */
     background: #191919;
   }
 
@@ -294,7 +294,7 @@ export const Toggler = styled.div`
 
 export const Emoji = styled.h2`
   padding: 0;
-  margin: -5px 0 2px 0;
+  margin: -8px 0 2px 0;
   text-shadow: ${props => (
     props.isDark ? `rgba(253, 252, 252, 0.51) 0px 0px 3px;` :
       `rgba(0, 0, 0, 0.51) 0px 0px 9px;`

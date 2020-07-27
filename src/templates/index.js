@@ -1,85 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import { FaStackOverflow } from 'react-icons/fa'
-import { AiFillGithub } from 'react-icons/ai'
-import { IoLogoTwitter, IoIosMail } from 'react-icons/io'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Navigation from '../components/navigation'
 import Card from '../components/card'
-import ExternalLink from '../components/external'
+import AboutMe from '../components/about'
 
 const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
-  const {
-    post: { edges: posts }, avatar } = data
+  const { post: { edges: posts }, avatar } = data
 
   return (
     <>
       <SEO />
       <Layout className>
         <div className="col">
-          <div style={{textAlign: 'center'}}>
-            <Img fixed={avatar.childImageSharp.fixed} />
-            <p>
-              <ExternalLink />
-              <a
-                style={{ fontSize: '25px' }}
-                href="mailto:contact@edgarmejia.com"
-              >
-                <IoIosMail />&nbsp;
-              </a>
-              <a
-                style={{ fontSize: '25px' }}
-                href="https://twitter.com/edgar_mmejia"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <IoLogoTwitter />
-              </a>
-              <a
-                style={{ fontSize: '25px' }}
-                href="https://stackoverflow.com/users/9200447"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaStackOverflow />&nbsp;
-              </a>
-              <a
-                style={{ fontSize: '25px' }}
-                href="https://github.com/edgarMejia"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiFillGithub />
-              </a>
-            </p>
-            <p>
-              Hi there! <span role="img" aria-label="Hi">👋🏼</span>
-              <br />I'm Edgar Mejía a full-stack developer from El Salvador.
-              <br />Currently I'm working in a Chatbot made with Python
-              <span role="img" aria-label="Hi"> 🐍</span> + Flask
-              <span role="img" aria-label="Hi"> 🌶</span>
-              <br /> This site is make to show my frontend experience.
-              <br />
-            </p>
-          </div>
+          <AboutMe avatar={avatar} />
         </div>
 
         <div className="row">
           {posts.map(({ node }) => {
             const {
               id,
-              excerpt: autoExcerpt,
               frontmatter: {
                 title,
                 date,
                 path,
                 author,
                 coverImage,
-                excerpt,
-                tags,
               },
             } = node
 
@@ -127,14 +75,11 @@ export const postsQuery = graphql`
       edges {
         node {
           id
-          excerpt
           frontmatter {
             title
             date(formatString: "DD/MM/YYYY")
             path
             author
-            excerpt
-            tags
             coverImage {
               childImageSharp {
                 fluid(maxWidth: 900) {
