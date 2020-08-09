@@ -55,6 +55,10 @@ const SEO = ({ description, lang, meta, keywords, title, coverImage, url, date }
           content: postUrl,
         },
         {
+          property: `theme-color`,
+          content: `#54233b`,
+        },
+        {
           property: `og:title`,
           content: metaTitle,
         },
@@ -67,28 +71,12 @@ const SEO = ({ description, lang, meta, keywords, title, coverImage, url, date }
           content: metaDescription,
         },
         {
-          property: `og:image`,
-          content: pageImage,
-        },
-        {
-          property: `og:image:width`,
-          content: `600`,
-        },
-        {
-          property: `og:image:height`,
-          content: `300`,
-        },
-        {
-          property: `og:image:alt`,
-          content: metaTitle,
-        },
-        {
           property: `og:type`,
-          content: `article`,
+          content: `website`,
         },
         {
           property: `og:url`,
-          content: postUrl,
+          content: baseUrl,
         },
         {
           name: `twitter:card`,
@@ -103,16 +91,8 @@ const SEO = ({ description, lang, meta, keywords, title, coverImage, url, date }
           content: metaDescription,
         },
         {
-          name: `twitter:image`,
-          content: pageImage,
-        },
-        {
-          name: `twitter:image:alt`,
-          content: metaTitle,
-        },
-        {
           name: `twitter:creator`,
-          content: author,
+          content: `@edgar_mmejia`,
         },
         {
           name: `article:published_time`,
