@@ -12,6 +12,7 @@ module.exports = {
     copyrights: 'MIT',
     author: `@edgarmejia`,
     defaultImg: 'default.JPG',
+    url: 'https://www.edgarmejia.com',
     logo: {
       src: '',
       alt: '',

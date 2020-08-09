@@ -12,6 +12,7 @@ const SEO = ({ description, lang, meta, keywords, title, image }) => {
               description
               author
               defaultImg
+              url
           }
       }
     }
@@ -22,10 +23,11 @@ const SEO = ({ description, lang, meta, keywords, title, image }) => {
     description: siteDescription,
     author,
     defaultImg,
+    url,
   } = data.site.siteMetadata
   const metaTitle = title || siteTitle
   const metaDescription = description || siteDescription
-  const pageImage = image || defaultImg
+  const pageImage = `${url}/${image || defaultImg}`
 
   return (
     <Helmet
