@@ -11,7 +11,7 @@ module.exports = {
     description: `This is my personal site, made with Gatsby`,
     copyrights: '',
     author: `@edgarmejia`,
-    defaultImg: 'default.JPG',
+    defaultImg: '/default.JPG',
     baseUrl: 'https://edgarmejia.com',
     logo: {
       src: '',
