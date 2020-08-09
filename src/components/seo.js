@@ -46,10 +46,10 @@ const SEO = ({ description, lang, meta, keywords, title, coverImage, url, date }
           name: `description`,
           content: metaDescription,
         },
-        {/*
+        {
           property: `image`,
           content: pageImage,
-        */},
+        },
         {
           property: `url`,
           content: postUrl,
