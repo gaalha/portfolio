@@ -75,7 +75,7 @@ const SEO = ({ description, lang, meta, keywords, title, image }) => {
         },
         {
           name: `twitter:image`,
-          content: defaultImg,
+          content: pageImage,
         },
         {
           name: `twitter:creator`,
