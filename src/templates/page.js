@@ -15,7 +15,7 @@ const BlogPostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title} description={excerpt || autoExcerpt} />
+      <SEO title={title} description={excerpt || autoExcerpt} coverImage={coverImage} />
       <Post
         key={id}
         title={title}
@@ -25,7 +25,6 @@ const BlogPostTemplate = ({ data }) => {
         coverImage={coverImage}
         html={html}
         tags={tags}
-        image={coverImage}
       />
     </Layout>
   )
@@ -51,7 +50,6 @@ export const pageQuery = graphql`
                 childImageSharp {
                     fluid(maxWidth: 800) {
                         ...GatsbyImageSharpFluid
-                        src
                     }
                 }
             }
