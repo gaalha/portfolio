@@ -12,7 +12,7 @@ const SEO = ({ description, lang, meta, keywords, title, coverImage, url, date }
               description
               author
               defaultImg
-              url
+              baseUrl
           }
       }
     }
