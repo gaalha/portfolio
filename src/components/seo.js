@@ -47,10 +47,6 @@ const SEO = ({ description, lang, meta, keywords, title, coverImage, url, date }
           content: metaDescription,
         },
         {
-          property: `image`,
-          content: pageImage,
-        },
-        {
           property: `url`,
           content: postUrl,
         },
@@ -69,6 +65,10 @@ const SEO = ({ description, lang, meta, keywords, title, coverImage, url, date }
         {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: pageImage,
         },
         {
           property: `og:type`,
