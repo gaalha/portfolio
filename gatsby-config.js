@@ -9,8 +9,9 @@ module.exports = {
   siteMetadata: {
     title: `edgarmejia.com`,
     description: `This is my personal site, made with Gatsby`,
-    copyrights: '',
+    copyrights: 'MIT',
     author: `@edgarmejia`,
+    defaultImg: 'default.JPG',
     logo: {
       src: '',
       alt: '',
