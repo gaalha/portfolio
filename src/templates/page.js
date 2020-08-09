@@ -5,14 +5,13 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Post from '../components/post'
 
-const BlogPostTemplate = ({ data, pageContext }) => {
+const BlogPostTemplate = ({ data }) => {
   const {
     frontmatter: { title, date, path, author, coverImage, excerpt, tags },
     excerpt: autoExcerpt,
     id,
     html,
   } = data.markdownRemark
-  const { next, previous } = pageContext
 
   return (
     <Layout>
@@ -26,8 +25,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         coverImage={coverImage}
         html={html}
         tags={tags}
-        previousPost={previous}
-        nextPost={next}
+        image={coverImage}
       />
     </Layout>
   )
@@ -37,10 +35,6 @@ export default BlogPostTemplate
 
 BlogPostTemplate.propTypes = {
   data: PropTypes.object.isRequired,
-  pageContext: PropTypes.shape({
-    next: PropTypes.object,
-    previous: PropTypes.object,
-  }),
 }
 
 export const pageQuery = graphql`
@@ -57,6 +51,7 @@ export const pageQuery = graphql`
                 childImageSharp {
                     fluid(maxWidth: 800) {
                         ...GatsbyImageSharpFluid
+                        src
                     }
                 }
             }

@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import Navigation from './navigation'
 import { toKebabCase } from '../helpers'
 
 const Post = ({
@@ -13,45 +12,30 @@ const Post = ({
   excerpt,
   tags,
   html,
-  previousPost,
-  nextPost,
-}) => {
-  const previousPath = previousPost && previousPost.frontmatter.path
-  const previousLabel = previousPost && previousPost.frontmatter.title
-  const nextPath = nextPost && nextPost.frontmatter.path
-  const nextLabel = nextPost && nextPost.frontmatter.title
+}) => (
+  <PostContontainer className="mt-1 mb-5 p-md-5">
+    <Title>
+      {excerpt ? <Link to={path}># {title}</Link> : title}
+    </Title>
 
-  return (
-    <PostContontainer className="mt-1 mb-5 p-md-5">
-      <Title>
-        {excerpt ? <Link to={path}># {title}</Link> : title}
-      </Title>
+    <Meta>
+      {date} {author && <>— Written by {author}</>}
+      {tags ? (
+        <Tags>
+          {tags.map(tag => (
+            <Link to={`/tag/${toKebabCase(tag)}/`} key={toKebabCase(tag)}>
+              <Tag>#{tag}</Tag>
+            </Link>
+          ))}
+        </Tags>
+      ) : null}
+    </Meta>
 
-      <Meta>
-        {date} {author && <>— Written by {author}</>}
-        {tags ? (
-          <Tags>
-            {tags.map(tag => (
-              <Link to={`/tag/${toKebabCase(tag)}/`} key={toKebabCase(tag)}>
-                <Tag>#{tag}</Tag>
-              </Link>
-            ))}
-          </Tags>
-        ) : null}
-      </Meta>
-
-      <>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-        <Navigation
-          previousPath={previousPath}
-          previousLabel={previousLabel}
-          nextPath={nextPath}
-          nextLabel={nextLabel}
-        />
-      </>
-    </PostContontainer>
-  )
-}
+    <>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+    </>
+  </PostContontainer>
+)
 
 Post.propTypes = {
   title: PropTypes.string,
@@ -61,8 +45,6 @@ Post.propTypes = {
   excerpt: PropTypes.string,
   html: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
-  previousPost: PropTypes.object,
-  nextPost: PropTypes.object,
 }
 
 export default Post

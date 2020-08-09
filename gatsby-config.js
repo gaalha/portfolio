@@ -9,7 +9,7 @@ module.exports = {
   siteMetadata: {
     title: `edgarmejia.com`,
     description: `This is my personal site, made with Gatsby`,
-    copyrights: 'MIT',
+    copyrights: '',
     author: `@edgarmejia`,
     defaultImg: 'default.JPG',
     url: 'https://edgarmejia.com',
