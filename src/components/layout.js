@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className="layout">
+      <LayoutContainer>
         <Header
           siteTitle={title}
           siteLogo={logo}
@@ -53,11 +53,11 @@ const Layout = ({ children }) => {
           mainMenuItems={showMenuItems}
           menuMoreText={menuMoreText}
         />
-        <Container className="content mx-auto mt-4">
+        <Content className="mx-auto mt-4">
           {children}
-        </Container>
+        </Content>
         <Footer copyrights={copyrights} />
-      </div>
+      </LayoutContainer>
     </>
   )
 }
@@ -68,6 +68,14 @@ Layout.propTypes = {
 
 export default Layout
 
-const Container = styled.div`
+const LayoutContainer = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+`
+
+const Content = styled.div`
   height: 100%;
+  flex-grow: 1;
+  padding: 20px;
 `

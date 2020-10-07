@@ -11,17 +11,6 @@ body {
   margin: 0;
 }
 
-.layout {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-.content {
-  flex-grow: 1;
-  padding: 20px;
-}
-
 div[role="group"][tabindex] {
   height: 100%;
 }
