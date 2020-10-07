@@ -11,7 +11,7 @@ const blogTemplate = path.resolve(`./src/templates/blog.js`)
 const tagsTemplate = path.resolve(`./src/templates/tags.js`)
 
 exports.createPages = ({ actions, graphql, getNodes }) => {
-    const { createPage } = actions
+    const { createPage, createRedirect } = actions
     const allNodes = getNodes()
 
     return graphql(`
@@ -59,6 +59,9 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
                 internal.type === 'MarkdownRemark' &&
                 fileAbsolutePath.indexOf('/posts/') !== -1,
         )
+
+        createRedirect({fromPath: `/home`, toPath: `/`})
+        createRedirect({fromPath: `/index`, toPath: `/`})
 
         // Create posts index with pagination
         paginate({
