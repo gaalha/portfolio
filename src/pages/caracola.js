@@ -16,7 +16,7 @@ const CaracolaPage = ({ data }) => {
         title="¿Qué dice la caracola mágica?"
         coverImage={caracol}
         url="https://edgarmejia.com/caracola"
-        description=""
+        description="Preguntemos a la caracola ..."
       />
       <Post
         title="¿Qué dice la caracola mágica?"
