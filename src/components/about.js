@@ -12,6 +12,17 @@ const AboutMe = ({avatar}) => (
     <Img fixed={avatar.childImageSharp.fixed} />
 
     <p>
+      <HelloText>Hi there! <span role="img" aria-label="Hi">👋🏼</span></HelloText>
+      <br />
+      <br />I'm <MyName>Edgar Mejía</MyName> a full-stack developer from El Salvador
+      <span role="img" aria-label="Flag"> 🇸🇻</span>.
+      <br />Currently I'm working in a Chatbot made with Python
+      <span role="img" aria-label="Python"> 🐍</span> + Flask
+      <span role="img" aria-label="Flask"> 🌶</span>
+      <br />
+    </p>
+
+    <p>
       <SocialIcon href={`mailto:${CONST.MY_EMAIL}`}>
         <IoIosMail />&nbsp;
       </SocialIcon>
@@ -33,14 +44,6 @@ const AboutMe = ({avatar}) => (
       </SocialIcon>
     </p>
 
-    <p>
-      Hi there! <span role="img" aria-label="Hi">👋🏼</span>
-      <br />I'm Edgar Mejía a full-stack developer from El Salvador.
-      <br />Currently I'm working in a Chatbot made with Python
-      <span role="img" aria-label="Python"> 🐍</span> + Flask
-      <span role="img" aria-label="Flask"> 🌶</span>
-      <br />
-    </p>
   </Container>
 )
 
@@ -56,4 +59,13 @@ const SocialIcon = styled.a`
 
 const Container = styled.div`
   text-align: center;
+`
+
+const HelloText = styled.b`
+  font-size: 30px;
+`
+
+const MyName = styled.span`
+  color: #da056d;
+  font-weight: bold;
 `
