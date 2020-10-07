@@ -3,12 +3,6 @@
 @import "./fonts.css";
 @import "./prism.css";
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 a {
   text-decoration: none !important;
 }
@@ -18,8 +12,6 @@ a:hover {
 }
 
 body {
-  margin                    : 0;
-  padding                   : 0;
   font-family               : 'Inter UI', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
   font-size                 : 1rem;
   font-weight               : 600;
@@ -40,7 +32,6 @@ body {
   }
 
   &.dark {
-    /* background      : linear-gradient(rgba(130, 46, 96, 0.49) 0%, rgba(0, 0, 0, 0) 100%); */
     background-color: #292a2d;
     color           : var(--dark-color);
   }
@@ -322,23 +313,5 @@ hr {
     width   : 100%;
     height  : 100%;
     border  : 0;
-  }
-}
-
-footer {
-  font-size    : 1rem;
-  text-align   : center;
-  /* margin-bottom: 50px; */
-  background-image: linear-gradient(#fff, #fbbcdb);
-  height: 100px;
-  padding-top: 42px;
-
-  .dark & {
-    background: linear-gradient(#292a2d, #54233b);
-  }
-
-  @media (--phone) {
-    display       : flex;
-    flex-direction: column;
   }
 }

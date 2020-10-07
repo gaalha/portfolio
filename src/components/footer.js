@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import ExternalLink from './external'
 
 const Footer = ({ copyrights }) => (
-  <footer>
+  <FooterContainer>
     {copyrights ? (
       <div
         dangerouslySetInnerHTML={{
@@ -13,19 +13,21 @@ const Footer = ({ copyrights }) => (
       />
     ) : (
       <>
-        <Item>
-          &copy; { new Date().getFullYear() }, Built with&nbsp;
-          <ExternalLink link="https://www.gatsbyjs.org" text="Gatsby" />
-        </Item>
-        <Item>
-          <ExternalLink
-            link="https://github.com/edgarMejia/edgarmejia.com"
-            text="Source of this page"
-          />
-        </Item>
+        <FooterContent>
+          <Item>
+            &copy; { new Date().getFullYear() }, Built with&nbsp;
+            <ExternalLink link="https://www.gatsbyjs.org" text="Gatsby" />
+          </Item>
+          <Item>
+            <ExternalLink
+              link="https://github.com/edgarMejia/edgarmejia.com"
+              text="Source of this page"
+            />
+          </Item>
+        </FooterContent>
       </>
     )}
-  </footer>
+  </FooterContainer>
 )
 
 Footer.propTypes = {
@@ -33,6 +35,28 @@ Footer.propTypes = {
 }
 
 export default Footer
+
+const FooterContainer = styled.footer`
+  font-size: 1rem;
+  background-image: linear-gradient(#fff, #fbbcdb);
+  height: 100px;
+  padding-top: 42px;
+  margin-top: 2rem;
+  display: flex;
+
+  .dark & {
+    background: linear-gradient(#292a2d, #54233b);
+  }
+
+  /* @media (max-width: 684px) {
+    display: flex;
+    flex-direction: column;
+  } */
+`
+
+const FooterContent = styled.div`
+  margin: 0 auto;
+`
 
 const Item = styled.span`
   &:not(:first-of-type) {

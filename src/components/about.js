@@ -37,9 +37,8 @@ const AboutMe = ({avatar}) => (
       Hi there! <span role="img" aria-label="Hi">👋🏼</span>
       <br />I'm Edgar Mejía a full-stack developer from El Salvador.
       <br />Currently I'm working in a Chatbot made with Python
-      <span role="img" aria-label="Hi"> 🐍</span> + Flask
-      <span role="img" aria-label="Hi"> 🌶</span>
-      <br /> This site is make to show my frontend experience.
+      <span role="img" aria-label="Python"> 🐍</span> + Flask
+      <span role="img" aria-label="Flask"> 🌶</span>
       <br />
     </p>
   </Container>

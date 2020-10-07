@@ -13,7 +13,7 @@ const Post = ({
   tags,
   html,
 }) => (
-  <PostContontainer className="mt-1 mb-5 p-md-5">
+  <PostContontainer className="mt-1 mb-5">
     <Title>
       {excerpt ? <Link to={path}># {title}</Link> : title}
     </Title>

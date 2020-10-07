@@ -45,7 +45,7 @@ const Image = styled(Img)`
 `
 
 const Container = styled.div`
-  width: 315px;
+  width: 290px;
   height: 280px;
   border-radius: 14px;
   overflow: hidden;

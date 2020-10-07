@@ -60,7 +60,6 @@ const Header = props => {
 Header.propTypes = {
   siteLogo: PropTypes.object,
   logoText: PropTypes.string,
-  defaultTheme: PropTypes.string,
   mainMenu: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,

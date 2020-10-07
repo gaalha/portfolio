@@ -5,19 +5,14 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Navigation from '../components/navigation'
 import Card from '../components/card'
-import AboutMe from '../components/about'
 
-const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
-  const { post: { edges: posts }, avatar } = data
+const Blog = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
+  const { post: { edges: posts } } = data
 
   return (
     <>
       <SEO />
-      <Layout className>
-        <div className="col">
-          <AboutMe avatar={avatar} />
-        </div>
-
+      <Layout>
         <div className="row">
           {posts.map(({ node }) => {
             const {
@@ -56,7 +51,7 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
   )
 }
 
-Index.propTypes = {
+Blog.propTypes = {
   data: PropTypes.object.isRequired,
   pageContext: PropTypes.shape({
     nextPagePath: PropTypes.string,
@@ -91,14 +86,7 @@ export const postsQuery = graphql`
         }
       }
     }
-    avatar: file(relativePath: { eq: "avatar.png" }) {
-      childImageSharp {
-        fixed(width: 250, height: 250) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
   }
 `
 
-export default Index
+export default Blog

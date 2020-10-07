@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
+import styled from 'styled-components'
 import Header from './header'
 import Footer from './footer'
 import '../styles/layout.css'
@@ -42,7 +43,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className="container-fluid p-0 m-0">
+      <div className="layout">
         <Header
           siteTitle={title}
           siteLogo={logo}
@@ -52,11 +53,9 @@ const Layout = ({ children }) => {
           mainMenuItems={showMenuItems}
           menuMoreText={menuMoreText}
         />
-        <div className="container mx-auto mt-4 mb-5">
-          <div className="row pl-3 pr-3">
-            {children}
-          </div>
-        </div>
+        <Container className="content mx-auto mt-4">
+          {children}
+        </Container>
         <Footer copyrights={copyrights} />
       </div>
     </>
@@ -68,3 +67,7 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+const Container = styled.div`
+  height: 100%;
+`

@@ -15,7 +15,13 @@ const BlogPostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title} description={excerpt || autoExcerpt} coverImage={coverImage} url={path} date={date} />
+      <SEO
+        title={title}
+        description={excerpt || autoExcerpt}
+        coverImage={coverImage}
+        url={path}
+        date={date}
+      />
       <Post
         key={id}
         title={title}
