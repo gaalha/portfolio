@@ -12,6 +12,7 @@ const Post = ({
   excerpt,
   tags,
   html,
+  children,
 }) => (
   <PostContontainer className="mt-1 mb-5">
     <Title>
@@ -32,7 +33,13 @@ const Post = ({
     </Meta>
 
     <>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      {children || null}
+    </>
+
+    <>
+      {html ? (
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      ) : null}
     </>
   </PostContontainer>
 )
@@ -45,6 +52,7 @@ Post.propTypes = {
   excerpt: PropTypes.string,
   html: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
+  children: PropTypes.node,
 }
 
 export default Post
