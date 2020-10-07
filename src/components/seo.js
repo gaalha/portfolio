@@ -25,6 +25,7 @@ const SEO = ({ description, lang, meta, keywords, title, coverImage, url, date }
     defaultImg,
     baseUrl,
   } = data.site.siteMetadata
+
   const metaTitle = title || siteTitle
   const metaDescription = description || siteDescription
   const pageImage = `${baseUrl}${coverImage?.childImageSharp?.fluid?.src || defaultImg}`

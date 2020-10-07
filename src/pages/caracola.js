@@ -11,7 +11,6 @@ const CaracolaPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="404: Not found" />
       <SEO
         title="¿Qué dice la caracola mágica?"
         coverImage={caracol}
