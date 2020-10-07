@@ -28,7 +28,9 @@ const SEO = ({ description, lang, meta, keywords, title, coverImage, url, date }
 
   const metaTitle = title || siteTitle
   const metaDescription = description || siteDescription
-  const pageImage = `${baseUrl}${coverImage?.childImageSharp?.fluid?.src || defaultImg}`
+  const randomInt = Math.floor(Math.random() * 1000)
+  const image = coverImage?.childImageSharp?.fluid?.src || defaultImg
+  const pageImage = `${baseUrl}${image}?v=${randomInt}`
   const postUrl = `${baseUrl}${url}`
 
   return (
