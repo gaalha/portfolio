@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Post from '../components/post'
 
 const CaracolaPage = ({ data }) => {
   const random_boolean = Math.random() >= 0.5
@@ -15,9 +16,18 @@ const CaracolaPage = ({ data }) => {
         title="¿Qué dice la caracola mágica?"
         coverImage={caracol}
         url="https://edgarmejia.com/caracola"
+        description=""
       />
-      <h2>¿Qué dice la caracola mágica?</h2>
-      <Img fixed={caracol.childImageSharp.fixed} />
+      <Post
+        title="¿Qué dice la caracola mágica?"
+        date="2020-10-07"
+        author="Edgar Mejía"
+        tags={['Meme', 'Bob Esponja', 'Caracola']}
+      >
+        <>
+          <Img fluid={caracol.childImageSharp.fluid} />
+        </>
+      </Post>
     </Layout>
   )
 }
@@ -30,15 +40,15 @@ export const postsQuery = graphql`
   query {
     caracolaSi: file(relativePath: { eq: "caracola_si.png" }) {
       childImageSharp {
-        fixed(width: 500) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     caracolaNo: file(relativePath: { eq: "caracola_no.jpeg" }) {
       childImageSharp {
-        fixed(width: 500) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
