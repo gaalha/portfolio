@@ -38,20 +38,14 @@ export default Footer
 
 const FooterContainer = styled.footer`
   font-size: 1rem;
-  background-image: linear-gradient(#fff, #fbbcdb);
-  height: 100px;
-  padding-top: 42px;
-  margin-top: 2rem;
+  background-image: linear-gradient(#fff0,#fd9dcc2b,#fd9dcc85);
+  height: 70px;
+  padding-top: 30px;
   display: flex;
 
   .dark & {
-    background: linear-gradient(#292a2d, #54233b);
+    background: linear-gradient(#fff0,#54233b26,#54233b85);
   }
-
-  /* @media (max-width: 684px) {
-    display: flex;
-    flex-direction: column;
-  } */
 `
 
 const FooterContent = styled.div`

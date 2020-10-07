@@ -73,17 +73,11 @@ Header.propTypes = {
 export default Header
 
 const HeaderContainer = styled.header`
-  background: #fafafa;
-  transition: background-color 0.2s, color 0.2s;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
   padding: 20px;
-
-  .dark & {
-    background: transparent;
-  }
 
   a {
     text-decoration: none;
