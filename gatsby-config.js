@@ -23,7 +23,7 @@ module.exports = {
     showMenuItems: 3,
     menuMoreText: 'Show more',
     mainMenu: [
-      { title: 'My repos', path: '/repos' },
+      { title: 'Blog?', path: '/blog' },
       { title: 'Thanks', path: '/thanks' },
     ],
   },
