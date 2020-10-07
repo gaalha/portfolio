@@ -20,7 +20,7 @@ const Footer = ({ copyrights }) => (
           </Item>
           <Item>
             <ExternalLink
-              link="https://github.com/edgarMejia/edgarmejia.com"
+              link="/source"
               text="Source of this page"
             />
           </Item>
