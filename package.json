@@ -21,6 +21,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "babel-plugin-styled-components": "^1.10.7",
     "bootstrap": "^4.5.0",
     "core-js": "^2.6.11",
@@ -40,6 +41,7 @@
     "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-prismjs": "^3.2.0",
     "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-source-google-spreadsheet": "^2.0.0",
     "gatsby-transformer-remark": "^2.1.19",
     "gatsby-transformer-sharp": "^2.1.8",
     "prismjs": "^1.15.0",
@@ -48,6 +50,7 @@
     "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.10.0",
+    "react-simple-snackbar": "^1.1.10",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
