@@ -5,6 +5,10 @@ const postCSSImports = require('postcss-import')
 const cssnano = require('cssnano')
 const postCSSMixins = require('postcss-mixins')
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `edgarmejia.com`,
@@ -120,6 +124,16 @@ module.exports = {
         color: `tomato`,
         showSpinner: true,
         minimum: 0.4,
+      },
+    },
+    {
+      resolve: `gatsby-source-google-spreadsheet`,
+      options: {
+        spreadsheetId: process.env.GATSBY_SPREADSHEET_ID,
+        credentials:{
+          client_email: process.env.GATSBY_CLIENT_EMAIL,
+          private_key: process.env.GATSBY_PRIVATE_KEY,
+        },
       },
     },
     `gatsby-plugin-styled-components`,

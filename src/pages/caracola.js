@@ -36,6 +36,8 @@ CaracolaPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
+export default CaracolaPage
+
 export const postsQuery = graphql`
   query {
     caracolaSi: file(relativePath: { eq: "caracola_si.png" }) {
@@ -54,5 +56,3 @@ export const postsQuery = graphql`
     }
   }
 `
-
-export default CaracolaPage
