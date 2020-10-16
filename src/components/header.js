@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Menu from './menu'
+import octocat from '../../static/octocat.png'
 
 const Header = props => {
   const {
@@ -29,7 +30,7 @@ const Header = props => {
               ) : (
                 <>
                   <img
-                    src={require('../../static/octocat.png')}
+                    src={octocat}
                     style={{ width: '25px', height: '25px' }}
                     alt="Hi 👋🏼"
                   />
@@ -78,7 +79,6 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   position: relative;
   padding: 20px;
-
   a {
     text-decoration: none;
   }
@@ -98,7 +98,6 @@ const Logo = styled.div`
   align-items: center;
   text-decoration: none;
   font-weight: bold;
-
   & img {
     height: 44px;
   }
