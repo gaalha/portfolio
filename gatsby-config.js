@@ -12,8 +12,6 @@ if (process.env.NODE_ENV === 'development') {
   })
 }
 
-console.log(`VARIABLES: ${process.env}`)
-
 module.exports = {
   siteMetadata: {
     title: `edgarmejia.com`,
@@ -137,7 +135,7 @@ module.exports = {
         spreadsheetId: process.env.SPREADSHEET_ID,
         credentials:{
           client_email: process.env.CLIENT_EMAIL,
-          private_key: process.env.PRIVATE_KEY,
+          private_key: process.env.PRIVATE_KEY.replace(/\\n/gm, '\n'),
         },
       },
     },
