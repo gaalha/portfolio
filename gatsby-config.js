@@ -5,9 +5,14 @@ const postCSSImports = require('postcss-import')
 const cssnano = require('cssnano')
 const postCSSMixins = require('postcss-mixins')
 
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+if (process.env.NODE_ENV === 'development') {
+  // eslint-disable-next-line global-require
+  require('dotenv').config({
+    path: `.env.${process.env.NODE_ENV}`,
+  })
+}
+
+console.log(`VARIABLES: ${process.env}`)
 
 module.exports = {
   siteMetadata: {
@@ -129,10 +134,10 @@ module.exports = {
     {
       resolve: `gatsby-source-google-spreadsheet`,
       options: {
-        spreadsheetId: process.env.GATSBY_SPREADSHEET_ID,
+        spreadsheetId: process.env.SPREADSHEET_ID,
         credentials:{
-          client_email: process.env.GATSBY_CLIENT_EMAIL,
-          private_key: process.env.GATSBY_PRIVATE_KEY,
+          client_email: process.env.CLIENT_EMAIL,
+          private_key: process.env.PRIVATE_KEY,
         },
       },
     },
