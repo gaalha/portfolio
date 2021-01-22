@@ -118,7 +118,7 @@ module.exports = {
         background_color: `#343434`,
         theme_color: `#343434`,
         display: `minimal-ui`,
-        icon: `src/images/avatar.png`,
+        icon: `src/images/avatar2.jpg`,
       },
     },
     {

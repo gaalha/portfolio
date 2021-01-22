@@ -26,7 +26,7 @@ Index.propTypes = {
 
 export const postsQuery = graphql`
   query {
-    avatar: file(relativePath: { eq: "avatar.png" }) {
+    avatar: file(relativePath: { eq: "avatar2.jpg" }) {
       childImageSharp {
         fixed(width: 250, height: 250) {
           ...GatsbyImageSharpFixed
