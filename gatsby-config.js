@@ -30,8 +30,8 @@ module.exports = {
     showMenuItems: 3,
     menuMoreText: 'Show more',
     mainMenu: [
-      { title: 'Blog?', path: '/blog' },
-      { title: 'Thanks', path: '/thanks' },
+      // { title: 'Blog?', path: '/blog' },
+      { title: 'Resources', path: '/resources' },
     ],
   },
   plugins: [

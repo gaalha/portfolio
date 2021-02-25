@@ -1,8 +1,8 @@
 ---
-title: "Tutorials & repos used to make this page 💜"
+title: "Resources used to make this page 💜"
 date: "2020-06-24"
 author: "Edgar Mejía"
-path: "/thanks"
+path: "/resources"
 ---
 
 ### Page based on:
