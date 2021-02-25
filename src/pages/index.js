@@ -12,7 +12,7 @@ const Index = ({ data }) => {
     <>
       <SEO />
       <Layout>
-        <div className="col">
+        <div className="col-12">
           <AboutMe avatar={avatar} />
         </div>
       </Layout>

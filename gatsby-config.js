@@ -14,8 +14,8 @@ if (process.env.NODE_ENV === 'development') {
 
 module.exports = {
   siteMetadata: {
-    title: `edgarmejia.com`,
-    description: `This is my personal site, made with Gatsby`,
+    title: `EM!`,
+    description: `This is my personal site.`,
     copyrights: '',
     author: `@edgarmejia`,
     defaultImg: '/default.JPG',
@@ -24,7 +24,7 @@ module.exports = {
       src: '',
       alt: '',
     },
-    logoText: 'edgarmejia.com',
+    logoText: 'EM!',
     defaultTheme: '',
     postsPerPage: 6,
     showMenuItems: 3,

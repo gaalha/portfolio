@@ -16,9 +16,8 @@ const AboutMe = ({avatar}) => (
       <br />
       <br />I'm <MyName>Edgar Mejía</MyName> a full-stack developer from El Salvador
       <span role="img" aria-label="Flag"> 🇸🇻</span>.
-      <br />Currently I'm working in a Chatbot made with Python
-      <span role="img" aria-label="Python"> 🐍</span> + Flask
-      <span role="img" aria-label="Flask"> 🌶</span>
+      <br />Currently I'm learning Swift
+      <span role="img" aria-label="Emotion"> 🥴</span>
       <br />
     </p>
 
@@ -66,13 +65,8 @@ const HelloText = styled.b`
 `
 
 const MyName = styled.span`
-  /* color: #da056d; */
   font-weight: bold;
-
-  /* &:hover { */
   background: linear-gradient(92.05deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  text-shadow: rgba(0, 0, 0, 0.30) 0px 0px 16px;
-  /* } */
 `

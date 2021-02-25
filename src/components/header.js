@@ -7,7 +7,6 @@ import octocat from '../../static/octocat.png'
 
 const Header = props => {
   const {
-    siteLogo,
     logoText,
     mainMenu,
     mainMenuItems,
@@ -25,19 +24,15 @@ const Header = props => {
         <Inner>
           <Link to="/">
             <Logo>
-              {siteLogo.src ? (
-                <img src={siteLogo.src} alt={siteLogo.alt} />
-              ) : (
-                <>
-                  <img
-                    src={octocat}
-                    style={{ width: '25px', height: '25px' }}
-                    alt="Hi 👋🏼"
-                  />
-                  &nbsp;
-                  <Text>{logoText}</Text>
-                </>
-              )}
+              <>
+                <img
+                  src={octocat}
+                  style={{ width: '25px', height: '25px' }}
+                  alt="Hi 👋🏼"
+                />
+                &nbsp;
+                <Text>{logoText}</Text>
+              </>
             </Logo>
           </Link>
 
@@ -59,7 +54,6 @@ const Header = props => {
 }
 
 Header.propTypes = {
-  siteLogo: PropTypes.object,
   logoText: PropTypes.string,
   mainMenu: PropTypes.arrayOf(
     PropTypes.shape({
@@ -74,13 +68,19 @@ Header.propTypes = {
 export default Header
 
 const HeaderContainer = styled.header`
-  display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
   padding: 20px;
-  a {
-    text-decoration: none;
+  position: fixed;
+  width: 100%;
+  height: 4rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-top: 2px solid #f875b4;
+  transform: translateZ(0);
+  z-index: 1;
+
+  .dark & {
+    background-color: rgb(41, 42, 45, 0.95);
   }
 `
 
@@ -98,16 +98,20 @@ const Logo = styled.div`
   align-items: center;
   text-decoration: none;
   font-weight: bold;
+
   & img {
     height: 44px;
   }
 `
 
 const Text = styled.span`
-  font-size: 18px;
+  font-size: 25px;
+
+  //transform: rotate(10deg);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 `
 
 const Right = styled.span`
-  display : flex;
+  display: flex;
   position: relative;
 `

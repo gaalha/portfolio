@@ -184,10 +184,9 @@ export const DesktopMenu = styled.ul`
   align-items: center;
   justify-content: flex-start;
   max-width: 100%;
-  margin: 0 auto;
   padding: 0 15px;
   list-style: none;
-  margin-right: 18px;
+  margin: 0 18px 0 auto;
 
   li {
     margin: 0 12px;
@@ -197,7 +196,7 @@ export const DesktopMenu = styled.ul`
     margin-right: 10px;
     padding: 0;
     line-height: 0;
-    background : none;
+    background: none;
     color: inherit;
     border: none;
     box-shadow: none;
@@ -273,7 +272,7 @@ export const SubMenuContainer = styled.ul`
 
 export const MenuArrow = styled.span`
   display: inline-block;
-  font-family: 'Inter UI';
+  font-family: 'Inter UI',serif;
   margin-left: 5px;
   transform: rotate(90deg);
 `

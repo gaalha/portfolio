@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
           mainMenuItems={showMenuItems}
           menuMoreText={menuMoreText}
         />
-        <Content className="mx-auto mt-4">
+        <Content className="mx-auto mt-5">
           {children}
         </Content>
         <Footer copyrights={copyrights} />
