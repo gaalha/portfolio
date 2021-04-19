@@ -14,10 +14,10 @@ const AboutMe = ({avatar}) => (
     <p>
       <HelloText>Hi there! <span role="img" aria-label="Hi">👋🏼</span></HelloText>
       <br />
-      <br />I'm <MyName>Edgar Mejía</MyName> a full-stack developer from El Salvador
+      <br />I'm <MyName>Edgar Mejía</MyName>, a full-stack developer from El Salvador
       <span role="img" aria-label="Flag"> 🇸🇻</span>.
-      <br />Currently I'm learning Swift
-      <span role="img" aria-label="Emotion"> 🥴</span>
+      <br />Currently, I'm learning Swift
+      <span role="img" aria-label="Emotion"> 🥴</span>.
       <br />
     </p>
 
