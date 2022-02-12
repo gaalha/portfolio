@@ -74,13 +74,13 @@ const HeaderContainer = styled.header`
   position: fixed;
   width: 100%;
   height: 4rem;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-top: 2px solid #f875b4;
+  background-color: var(--light-header-background);
+  border-top: 2px solid var(--primary-color);
   transform: translateZ(0);
   z-index: 1;
 
   .dark & {
-    background-color: rgb(41, 42, 45, 0.95);
+    background-color: var(--dark-header-background);
   }
 `
 

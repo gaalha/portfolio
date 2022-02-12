@@ -1,5 +1,8 @@
 :root {
+  --primary-color: #f875b4;
+
   /* light theme color */
+  --light-header-background: rgba(255, 255, 255, 0.95);
   --light-background          : #fff;
   --light-background-secondary: #eaeaea;
   --light-color               : #222;
@@ -7,6 +10,7 @@
   --light-border-color        : #dcdcdc;
 
   /* dark theme colors */
+  --dark-header-background: rgb(41, 42, 45, 0.95);
   --dark-background          : #343434;
   --dark-background-secondary: #3b3d42;
   --dark-color               : #a9a9b3;

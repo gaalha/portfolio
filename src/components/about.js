@@ -10,45 +10,46 @@ import * as CONST from '../utils/constants'
 
 const AboutMe = ({avatar}) => (
   <Container>
-    <Img fixed={avatar.childImageSharp.fixed} />
+      <Img fixed={avatar.childImageSharp.fixed} />
 
-    <p>
-      <HelloText>Hi there! <span role="img" aria-label="Hi">👋🏼</span></HelloText>
-      <br />
-      <br />I'm <MyName>Edgar Mejía</MyName>, a full-stack developer from El Salvador
-      <span role="img" aria-label="Flag"> 🇸🇻</span>.
-      <br />Currently, I'm learning English.
-      {/* <span role="img" aria-label="Emotion"> 🥴</span> */}
-      <br />
-    </p>
+      <p>
+        <HelloText>Hi there! <span role="img" aria-label="Hi">👋🏼</span></HelloText>
+        <br />
+        <br />I'm <MyName>Edgar Mejía</MyName>, a full-stack developer from El Salvador
+        <span role="img" aria-label="Flag"> 🇸🇻</span>.
+        <br />Currently, I'm learning English.
+        <br />
+        <br />
 
-    <p>
-      <SocialIcon href={`mailto:${CONST.MY_EMAIL}`}>
-        <IoIosMail />&nbsp;
-      </SocialIcon>
+        <TellMeMoreLink href="#">More ...</TellMeMoreLink>
+      </p>
 
-      <SocialIcon href={CONST.URL_TWITTER} target="_blank" rel="noopener noreferrer">
-        <IoLogoTwitter />
-      </SocialIcon>
+      <p>
+        <SocialIcon href={`mailto:${CONST.MY_EMAIL}`}>
+          <IoIosMail />&nbsp;
+        </SocialIcon>
 
-      <SocialIcon href={CONST.URL_STACKOVERFLOW} target="_blank" rel="noopener noreferrer">
-        <FaStackOverflow />&nbsp;
-      </SocialIcon>
+        <SocialIcon href={CONST.URL_TWITTER} target="_blank" rel="noopener noreferrer">
+          <IoLogoTwitter />
+        </SocialIcon>
 
-      <SocialIcon href={CONST.URL_GITHUB} target="_blank" rel="noopener noreferrer">
-        <AiFillGithub />&nbsp;
-      </SocialIcon>
+        <SocialIcon href={CONST.URL_STACKOVERFLOW} target="_blank" rel="noopener noreferrer">
+          <FaStackOverflow />&nbsp;
+        </SocialIcon>
 
-      <SocialIcon href={CONST.URL_LINKEDIN} target="_blank" rel="noopener noreferrer">
-        <FaLinkedin />&nbsp;
-      </SocialIcon>
+        <SocialIcon href={CONST.URL_GITHUB} target="_blank" rel="noopener noreferrer">
+          <AiFillGithub />&nbsp;
+        </SocialIcon>
 
-      <SocialIcon href={CONST.URL_MAL} target="_blank" rel="noopener noreferrer" title="MyAnimeList">
-        <BsBookmarkFill />&nbsp;
-      </SocialIcon>
-    </p>
+        <SocialIcon href={CONST.URL_LINKEDIN} target="_blank" rel="noopener noreferrer">
+          <FaLinkedin />&nbsp;
+        </SocialIcon>
 
-  </Container>
+        <SocialIcon href={CONST.URL_MAL} target="_blank" rel="noopener noreferrer" title="MyAnimeList">
+          <BsBookmarkFill />&nbsp;
+        </SocialIcon>
+      </p>
+    </Container>
 )
 
 AboutMe.propTypes = {
@@ -73,5 +74,11 @@ const MyName = styled.span`
   font-weight: bold;
   background: linear-gradient(92.05deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%);
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
+`
+
+const TellMeMoreLink = styled.a`
+  margin-top: 10px;
+  color: var(--primary-color);
 `
