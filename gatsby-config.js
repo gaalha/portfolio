@@ -129,16 +129,6 @@ module.exports = {
         minimum: 0.4,
       },
     },
-    {
-      resolve: `gatsby-source-google-spreadsheet`,
-      options: {
-        spreadsheetId: process.env.SPREADSHEET_ID,
-        credentials:{
-          client_email: process.env.CLIENT_EMAIL,
-          private_key: process.env.PRIVATE_KEY.replace(/\\n/gm, '\n'),
-        },
-      },
-    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-dark-mode`,
   ],

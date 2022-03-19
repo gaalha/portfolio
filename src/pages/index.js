@@ -13,6 +13,14 @@ import * as CONST from '../utils/constants'
 
 const Index = ({ data }) => {
   const { avatar } = data
+  const SOCIAL = [
+    { url: `mailto:${CONST.MY_EMAIL}`, icon: IoIosMail, title: 'Send me an email' },
+    { url: CONST.URL_TWITTER, icon: IoLogoTwitter, title: 'Twitter' },
+    { url: CONST.URL_STACKOVERFLOW, icon: FaStackOverflow, title: 'Stackoverflow' },
+    { url: CONST.URL_GITHUB, icon: AiFillGithub, title: 'Github' },
+    { url: CONST.URL_LINKEDIN, icon: FaLinkedin, title: 'LinkedIn' },
+    { url: CONST.URL_MAL, icon: BsBookmarkFill, title: 'MyAnimeList' },
+  ]
 
   return (
     <>
