@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
           mainMenuItems={showMenuItems}
           menuMoreText={menuMoreText}
         />
-        <Content className="mx-auto mt-5">
+        <Content className="container mt-5">
           {children}
         </Content>
         <Footer copyrights={copyrights} />
@@ -79,4 +79,5 @@ const Content = styled.div`
   width: 100%;
   flex-grow: 1;
   padding: 20px;
+  z-index: 1;
 `

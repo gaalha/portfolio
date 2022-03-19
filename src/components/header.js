@@ -74,13 +74,17 @@ const HeaderContainer = styled.header`
   position: fixed;
   width: 100%;
   height: 4rem;
-  background-color: var(--light-header-background);
-  border-top: 2px solid var(--primary-color);
-  transform: translateZ(0);
-  z-index: 1;
+  z-index: 2;
 
-  .dark & {
-    background-color: var(--dark-header-background);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+
+  @-moz-document url-prefix() {
+    background-color: rgba(255, 255, 255, 0.95); // var(--light-header-background)
+
+    .dark & {
+      background-color: rgb(41, 42, 45, 0.95); // var(--dark-header-background)
+    }
   }
 `
 
