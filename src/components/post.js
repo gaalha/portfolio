@@ -103,7 +103,7 @@ const Tags = styled.div`
 
 const Tag = styled.span`
   display: inline-block;
-  margin-right: 10px;
+  margin: 10px 10px 0 0;
   background-color: #fe5186;
   border-radius: 5px;
   padding: 2px 4px;
