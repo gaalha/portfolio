@@ -5,13 +5,6 @@ const postCSSImports = require('postcss-import')
 const cssnano = require('cssnano')
 const postCSSMixins = require('postcss-mixins')
 
-if (process.env.NODE_ENV === 'development') {
-  // eslint-disable-next-line global-require
-  require('dotenv').config({
-    path: `.env.${process.env.NODE_ENV}`,
-  })
-}
-
 module.exports = {
   siteMetadata: {
     title: `EM!`,
@@ -31,6 +24,7 @@ module.exports = {
     menuMoreText: 'Show more',
     mainMenu: [
       // { title: 'Blog?', path: '/blog' },
+      { title: 'Experience', path: '/experience' },
       { title: 'Resources', path: '/resources' },
     ],
   },
@@ -42,13 +36,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts`,
       },
     },
     {

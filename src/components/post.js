@@ -37,9 +37,9 @@ const Post = ({
     </>
 
     <>
-      {html ? (
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      ) : null}
+      {
+        html ? (<div dangerouslySetInnerHTML={{ __html: html }} />) : null
+      }
     </>
   </PostContontainer>
 )
@@ -69,29 +69,31 @@ const PostContontainer = styled.div`
     max-width: 660px;
   }
 
-  h1 {
-    font-size: 30px;
-    margin: 0 0 10px;
-  }
-
   img {
     border-radius: 8px;
   }
 
-  border-radius: 5px;
-  background-color: #fafafa;
+  a {
+    color: #BCA1F7;
+  }
 
-  .dark & {
-    background: #252527;
+  em {
+    color: var(--dark-color-secondary);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 40px 0px 0px;
   }
 `
 
 const Title = styled.h1`
+  margin: 0px;
   a {text-decoration: none;}
 `
 
 const Meta = styled.div`
-  font-size    : 1rem;
+  color: var(--dark-color-secondary);
+  font-size: 1rem;
   margin-bottom: 30px;
 `
 
