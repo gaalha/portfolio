@@ -7,13 +7,8 @@ import Layout from '../components/layout'
 import Post from '../components/post'
 import Navigation from '../components/navigation'
 
-const Tags = ({
-  data,
-  pageContext: { nextPagePath, previousPagePath, tag },
-}) => {
-  const {
-    allMarkdownRemark: { edges: posts },
-  } = data
+const Tags = ({ data, pageContext: { nextPagePath, previousPagePath, tag }, }) => {
+  const { allMarkdownRemark: { edges: posts }, } = data
 
   return (
     <>

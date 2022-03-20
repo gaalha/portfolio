@@ -21,33 +21,35 @@ const Header = props => {
   return (
     <>
       <HeaderContainer>
-        <Inner>
-          <Link to="/">
-            <Logo>
-              <>
-                <img
-                  src={octocat}
-                  style={{ width: '25px', height: '25px' }}
-                  alt="Hi 👋🏼"
-                />
-                &nbsp;
-                <Text>{logoText}</Text>
-              </>
-            </Logo>
-          </Link>
+        <div className='container'>
+          <Inner>
+            <Link to="/">
+              <Logo>
+                <>
+                  <img
+                    src={octocat}
+                    style={{ width: '25px', height: '25px' }}
+                    alt="Hi 👋🏼"
+                  />
+                  &nbsp;
+                  <Text>{logoText}</Text>
+                </>
+              </Logo>
+            </Link>
 
-          <Right>
-            <Menu
-              mainMenu={mainMenu}
-              mainMenuItems={mainMenuItems}
-              isMobileMenuVisible={isMobileMenuVisible}
-              isSubMenuVisible={isSubMenuVisible}
-              menuMoreText={menuMoreText}
-              onToggleMobileMenu={onToggleMobileMenu}
-              onToggleSubMenu={onToggleSubMenu}
-            />
-          </Right>
-        </Inner>
+            <Right>
+              <Menu
+                mainMenu={mainMenu}
+                mainMenuItems={mainMenuItems}
+                isMobileMenuVisible={isMobileMenuVisible}
+                isSubMenuVisible={isSubMenuVisible}
+                menuMoreText={menuMoreText}
+                onToggleMobileMenu={onToggleMobileMenu}
+                onToggleSubMenu={onToggleSubMenu}
+              />
+            </Right>
+          </Inner>
+        </div>
       </HeaderContainer>
     </>
   )
@@ -68,7 +70,7 @@ Header.propTypes = {
 export default Header
 
 const HeaderContainer = styled.header`
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 20px;
   position: fixed;
@@ -91,11 +93,8 @@ const HeaderContainer = styled.header`
 
 const Inner = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 90%;
 `
 
 const Logo = styled.div`
@@ -111,8 +110,6 @@ const Logo = styled.div`
 
 const Text = styled.span`
   font-size: 25px;
-
-  //transform: rotate(10deg);
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 `
 

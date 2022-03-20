@@ -82,7 +82,7 @@ const PostContontainer = styled.div`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin: 40px 0px 0px;
+    margin: 10px 0px 0px;
   }
 `
 

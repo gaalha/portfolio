@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import { FaStackOverflow, FaLinkedin } from 'react-icons/fa'
@@ -25,12 +25,19 @@ const Index = ({ data }) => {
   return <>
     <SEO />
     <Layout>
-      <div className='row'>
+      <div className='row mt-4'>
         <div className="col-xs-12 col-md-6">
-          <GatsbyImage image={frontLarge.childImageSharp.gatsbyImageData} className="d-none d-lg-block center-this" />
-          <GatsbyImage image={frontSmall.childImageSharp.gatsbyImageData} className="d-block d-lg-none center-this" />
+          <GatsbyImage 
+            image={frontLarge.childImageSharp.gatsbyImageData} 
+            alt="Hi!" 
+            className="d-none d-lg-block center-this" />
+          <GatsbyImage 
+            image={frontSmall.childImageSharp.gatsbyImageData}
+            alt="Hi!"
+            className="d-block d-lg-none center-this" />
         </div>
-        <div className="col-xs-12 col-md-6">
+
+        <DescriptionSection className="col-xs-12 col-md-6">
           <DescriptionContainer>
             <h1>Hi there! <span role="img" aria-label="Hi">👋🏼</span>
             <br/>I'm <MyName>Edgar Mejía</MyName>, a full-stack developer from El Salvador <span role="img" aria-label="Flag"> 🇸🇻</span>.</h1>
@@ -63,10 +70,10 @@ const Index = ({ data }) => {
               <BsBookmarkFill />&nbsp;
             </SocialIcon>
           </SocialIconsContainer>
-        </div>
+        </DescriptionSection>
       </div>
     </Layout>
-  </>;
+  </>
 }
 
 Index.propTypes = {
@@ -76,12 +83,12 @@ Index.propTypes = {
 export const postsQuery = graphql`{
   frontLarge: file(relativePath: {eq: "front.jpeg"}) {
     childImageSharp {
-      gatsbyImageData(width: 450, layout: FIXED)
+      gatsbyImageData(height: 600, layout: CONSTRAINED)
     }
   }
   frontSmall: file(relativePath: {eq: "front.jpeg"}) {
     childImageSharp {
-      gatsbyImageData(width: 350, layout: FIXED)
+      gatsbyImageData(layout: CONSTRAINED)
     }
   }
 }
@@ -91,6 +98,7 @@ export default Index
 
 const SocialIcon = styled.a`
   font-size: 35px;
+  color: var(--dark-color-secondary);
 
   &:hover {
     color: #BCA1F7;
@@ -110,4 +118,8 @@ const MyName = styled.span`
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+`
+
+const DescriptionSection = styled.div`
+  
 `
