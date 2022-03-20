@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage } from 'gatsby-plugin-image'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import { FaStackOverflow, FaLinkedin } from 'react-icons/fa'
@@ -26,18 +26,14 @@ const Index = ({ data }) => {
     <SEO />
     <Layout>
       <div className='row'>
-        <div className="col-xs-12 col-md-6 text-center">
-          <GatsbyImage
-            image={frontLarge.childImageSharp.gatsbyImageData}
-            className="d-none d-lg-block" />
-          <GatsbyImage
-            image={frontSmall.childImageSharp.gatsbyImageData}
-            className="d-block d-lg-none" />
+        <div className="col-xs-12 col-md-6">
+          <GatsbyImage image={frontLarge.childImageSharp.gatsbyImageData} className="d-none d-lg-block center-this" />
+          <GatsbyImage image={frontSmall.childImageSharp.gatsbyImageData} className="d-block d-lg-none center-this" />
         </div>
         <div className="col-xs-12 col-md-6">
           <DescriptionContainer>
             <h1>Hi there! <span role="img" aria-label="Hi">👋🏼</span>
-            <br/><br/>I'm <MyName>Edgar Mejía</MyName>, a full-stack developer from El Salvador <span role="img" aria-label="Flag"> 🇸🇻</span>.</h1>
+            <br/>I'm <MyName>Edgar Mejía</MyName>, a full-stack developer from El Salvador <span role="img" aria-label="Flag"> 🇸🇻</span>.</h1>
           </DescriptionContainer>
 
           <br/>

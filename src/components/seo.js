@@ -7,13 +7,13 @@ const SEO = ({ description, lang, meta, keywords, title, coverImage, url, date }
   const data = useStaticQuery(graphql`
     query DefaultSEOQuery {
       site {
-          siteMetadata {
-              title
-              description
-              author
-              defaultImg
-              baseUrl
-          }
+        siteMetadata {
+          title
+          description
+          author
+          defaultImg
+          baseUrl
+        }
       }
     }
   `)
