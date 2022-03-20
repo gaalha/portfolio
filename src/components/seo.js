@@ -30,7 +30,7 @@ const SEO = ({ description, lang, meta, keywords, title, coverImage, url, date }
   const metaDescription = description || siteDescription
   const postUrl = `${baseUrl}${url}`
 
-  const pageImage = `${baseUrl}${coverImage?.childImageSharp?.fluid?.src || defaultImg}`
+  const pageImage = `${baseUrl}${coverImage?.childImageSharp?.gatsbyImageData?.src || defaultImg}`
 
   return (
     <Helmet

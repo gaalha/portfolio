@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { FaStackOverflow, FaLinkedin } from 'react-icons/fa'
 import { AiFillGithub } from 'react-icons/ai'
 import { IoLogoTwitter, IoIosMail } from 'react-icons/io'
@@ -10,7 +10,7 @@ import * as CONST from '../utils/constants'
 
 const AboutMe = ({avatar}) => (
   <Container>
-      <Img fixed={avatar.childImageSharp.fixed} />
+      <GatsbyImage image={avatar.childImageSharp.gatsbyImageData} />
 
       <p>
         <HelloText>Hi there! <span role="img" aria-label="Hi">👋🏼</span></HelloText>

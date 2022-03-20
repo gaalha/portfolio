@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Post from '../components/post'
@@ -25,11 +25,11 @@ const CaracolaPage = ({ data }) => {
         tags={['Meme', 'Bob Esponja', 'Caracola']}
       >
         <>
-          <Img fluid={caracol.childImageSharp.fluid} />
+          <GatsbyImage image={caracol.childImageSharp.gatsbyImageData} />
         </>
       </Post>
     </Layout>
-  )
+  );
 }
 
 CaracolaPage.propTypes = {
@@ -38,21 +38,16 @@ CaracolaPage.propTypes = {
 
 export default CaracolaPage
 
-export const postsQuery = graphql`
-  query {
-    caracolaSi: file(relativePath: { eq: "caracola_si.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    caracolaNo: file(relativePath: { eq: "caracola_no.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const postsQuery = graphql`{
+  caracolaSi: file(relativePath: {eq: "caracola_si.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 500, layout: CONSTRAINED)
     }
   }
+  caracolaNo: file(relativePath: {eq: "caracola_no.jpeg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 500, layout: CONSTRAINED)
+    }
+  }
+}
 `

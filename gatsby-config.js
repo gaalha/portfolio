@@ -69,7 +69,7 @@ module.exports = {
           postCssPresetEnv({
             importFrom: 'src/styles/variables.css',
             stage: 1,
-            preserve: false,
+            preserve: true,
           }),
           cssnano({
             preset: 'default',
@@ -77,6 +77,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

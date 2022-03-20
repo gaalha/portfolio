@@ -76,14 +76,15 @@ const HeaderContainer = styled.header`
   height: 4rem;
   z-index: 2;
 
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: var(--header-blur-chrome);
+  -webkit-backdrop-filter: var(--header-blur-webkit);
+  transition: background-color 0.2s, color 0.2s;
 
   @-moz-document url-prefix() {
-    background-color: rgba(255, 255, 255, 0.95); // var(--light-header-background)
+    background-color: var(--light-header-background-moz);
 
     .dark & {
-      background-color: rgb(41, 42, 45, 0.95); // var(--dark-header-background)
+      background-color: var(--dark-header-background-moz);
     }
   }
 `

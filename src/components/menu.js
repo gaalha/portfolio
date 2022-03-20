@@ -294,6 +294,12 @@ export const Toggler = styled.div`
 export const Emoji = styled.h2`
   padding: 0;
   margin: -8px 0 2px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+
   text-shadow: ${props => (
     props.isDark ? `rgba(253, 252, 252, 0.51) 0px 0px 3px;` :
       `rgba(0, 0, 0, 0.51) 0px 0px 9px;`

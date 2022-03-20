@@ -1,25 +1,29 @@
 :root {
-  --primary-color: #f875b4;
+    --primary-color: #f875b4;
+    --header-blur-chrome: saturate(180%) blur(20px);
+    --header-blur-webkit: saturate(180%) blur(20px);
 
-  /* light theme color */
-  --light-header-background: rgba(255, 255, 255, 0.95);
-  --light-background          : #fff;
-  --light-background-secondary: #eaeaea;
-  --light-color               : #222;
-  --light-color-secondary     : #999;
-  --light-border-color        : #dcdcdc;
+    /* light theme color */
+    --light-header-background-moz: rgba(255, 255, 255, 0.95);
 
-  /* dark theme colors */
-  --dark-header-background: rgb(41, 42, 45, 0.95);
-  --dark-background          : #343434;
-  --dark-background-secondary: #3b3d42;
-  --dark-color               : #a9a9b3;
-  --dark-color-secondary     : #73747b;
-  --dark-border-color        : #4a4b50;
+    --light-background: #fff;
+    --light-background-secondary: #eaeaea;
+    --light-color: #222;
+    --light-color-secondary: #999;
+    --light-border-color: #dcdcdc;
 
-  /* variables for js, must be the same as these in @custom-media queries */
-  --phoneWidth : (max-width: 684px);
-  --tabletWidth: (max-width: 900px);
+    /* dark theme colors */
+    --dark-header-background-moz: rgb(41, 42, 45, 0.95);
+
+    --dark-background: #343434;
+    --dark-background-secondary: #3b3d42;
+    --dark-color: #a9a9b3;
+    --dark-color-secondary: #73747b;
+    --dark-border-color: #4a4b50;
+
+    /* variables for js, must be the same as these in @custom-media queries */
+    --phoneWidth: (max-width: 684px);
+    --tabletWidth: (max-width: 900px);
 }
 
 @custom-media --phone (width < 684px);

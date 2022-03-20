@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const Card = ({
   title,
@@ -13,7 +13,7 @@ const Card = ({
 }) => (
   <Link to={path}>
     <Container className="mx-auto">
-      <Image fluid={coverImage.childImageSharp.fluid} />
+      <Image fluid={coverImage.childImageSharp.gatsbyImageData} />
 
       <Content>
         <Title>{title}</Title>
@@ -35,7 +35,7 @@ Card.propTypes = {
 
 export default Card
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   position: absolute;
   left: 0;
   top: 0;

@@ -59,34 +59,31 @@ Blog.propTypes = {
   }),
 }
 
-export const postsQuery = graphql`
-  query($limit: Int!, $skip: Int!) {
-    post: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//posts//" } }
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD/MM/YYYY")
-            path
-            author
-            coverImage {
-              childImageSharp {
-                fluid(maxWidth: 900) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+export const postsQuery = graphql`query ($limit: Int!, $skip: Int!) {
+  post: allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "//posts//"}}
+    sort: {fields: [frontmatter___date], order: DESC}
+    limit: $limit
+    skip: $skip
+  ) {
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "DD/MM/YYYY")
+          path
+          author
+          coverImage {
+            childImageSharp {
+              gatsbyImageData(width: 900, layout: CONSTRAINED)
             }
           }
         }
       }
     }
   }
+}
 `
 
 export default Blog
