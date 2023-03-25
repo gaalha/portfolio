@@ -32,15 +32,8 @@ const Post = ({
       ) : null}
     </Meta>
 
-    <>
-      {children || null}
-    </>
-
-    <>
-      {
-        html ? (<div dangerouslySetInnerHTML={{ __html: html }} />) : null
-      }
-    </>
+    <>{children || null}</>
+    <>{html ? (<div dangerouslySetInnerHTML={{ __html: html }} />) : null}</>
   </PostContontainer>
 )
 

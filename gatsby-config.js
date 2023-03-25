@@ -7,11 +7,11 @@ const postCSSMixins = require('postcss-mixins')
 
 module.exports = {
   siteMetadata: {
-    title: `EM!`,
+    title: `EM! ~ Besto dev`,
     description: `This is my personal site.`,
     copyrights: '',
     author: `@edgarmejia`,
-    defaultImg: '/default.JPG',
+    defaultImg: '/avatar2.jpg',
     baseUrl: 'https://edgarmejia.com',
     logo: {
       src: '',
@@ -119,5 +119,12 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-dark-mode`,
+    `gatsby-plugin-transition-link`,
+    {
+      resolve: `mini-css-extract-plugin`,
+      options: {
+        experimentalUseImportModule: true,
+      }
+    },
   ],
 }

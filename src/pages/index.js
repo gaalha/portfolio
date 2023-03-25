@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import { FaStackOverflow, FaLinkedin } from 'react-icons/fa'
@@ -19,19 +19,19 @@ const Index = ({ data }) => {
     { url: CONST.URL_STACKOVERFLOW, icon: FaStackOverflow, title: 'Stackoverflow' },
     { url: CONST.URL_GITHUB, icon: AiFillGithub, title: 'Github' },
     { url: CONST.URL_LINKEDIN, icon: FaLinkedin, title: 'LinkedIn' },
-    { url: CONST.URL_MAL, icon: BsBookmarkFill, title: 'MyAnimeList' },
+    // { url: CONST.URL_MAL, icon: BsBookmarkFill, title: 'MyAnimeList' },
   ]
 
   return <>
     <SEO />
     <Layout>
-      <div className='row mt-4'>
+      <div className='row align-items-center mt-4'>
         <div className="col-xs-12 col-md-6">
-          <GatsbyImage 
-            image={frontLarge.childImageSharp.gatsbyImageData} 
-            alt="Hi!" 
+          <GatsbyImage
+            image={frontLarge.childImageSharp.gatsbyImageData}
+            alt="Hi!"
             className="d-none d-lg-block center-this" />
-          <GatsbyImage 
+          <GatsbyImage
             image={frontSmall.childImageSharp.gatsbyImageData}
             alt="Hi!"
             className="d-block d-lg-none center-this" />
@@ -40,35 +40,17 @@ const Index = ({ data }) => {
         <DescriptionSection className="col-xs-12 col-md-6">
           <DescriptionContainer>
             <h1>Hi there! <span role="img" aria-label="Hi">👋🏼</span>
-            <br/>I'm <MyName>Edgar Mejía</MyName>, a full-stack developer from El Salvador <span role="img" aria-label="Flag"> 🇸🇻</span>.</h1>
+              <br />I'm <MyName>Edgar Mejía</MyName>, a <del>full-stack</del> mobile developer from El Salvador <span role="img" aria-label="Flag"> 🇸🇻</span>.</h1>
           </DescriptionContainer>
 
-          <br/>
+          <br />
 
           <SocialIconsContainer>
-            <SocialIcon href={`mailto:${CONST.MY_EMAIL}`}>
-              <IoIosMail />&nbsp;
-            </SocialIcon>
-
-            <SocialIcon href={CONST.URL_TWITTER} target="_blank" rel="noopener noreferrer">
-              <IoLogoTwitter />
-            </SocialIcon>
-
-            <SocialIcon href={CONST.URL_STACKOVERFLOW} target="_blank" rel="noopener noreferrer">
-              <FaStackOverflow />&nbsp;
-            </SocialIcon>
-
-            <SocialIcon href={CONST.URL_GITHUB} target="_blank" rel="noopener noreferrer">
-              <AiFillGithub />&nbsp;
-            </SocialIcon>
-
-            <SocialIcon href={CONST.URL_LINKEDIN} target="_blank" rel="noopener noreferrer">
-              <FaLinkedin />&nbsp;
-            </SocialIcon>
-
-            <SocialIcon href={CONST.URL_MAL} target="_blank" rel="noopener noreferrer" title="MyAnimeList">
-              <BsBookmarkFill />&nbsp;
-            </SocialIcon>
+            {SOCIAL.map((social, _) => (
+              <SocialIcon target="_blank" href={social.url} rel="noopener noreferrer">
+                <social.icon />&nbsp;
+              </SocialIcon>
+            ))}
           </SocialIconsContainer>
         </DescriptionSection>
       </div>
@@ -106,7 +88,7 @@ const SocialIcon = styled.a`
 `
 
 const DescriptionContainer = styled.div`
-  text-align: justify;
+  text-align: left;
 `
 
 const SocialIconsContainer = styled.div`
@@ -120,6 +102,4 @@ const MyName = styled.span`
   -webkit-background-clip: text;
 `
 
-const DescriptionSection = styled.div`
-  
-`
+const DescriptionSection = styled.div``

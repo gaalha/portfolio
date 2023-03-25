@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-const Navigation = ({ nextPath, previousPath, nextLabel, previousLabel }) =>
+const Navigation = ({nextPath, previousPath, nextLabel, previousLabel}) =>
   previousPath || nextPath ? (
     <NavigationContainer>
       {previousPath && (

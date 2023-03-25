@@ -5,14 +5,7 @@ import styled from 'styled-components'
 import Menu from './menu'
 import octocat from '../../static/octocat.png'
 
-const Header = props => {
-  const {
-    logoText,
-    mainMenu,
-    mainMenuItems,
-    menuMoreText,
-  } = props
-
+const Header = ({logoText, mainMenu, mainMenuItems, menuMoreText,}) => {
   const [isMobileMenuVisible, toggleMobileMenu] = useState(false)
   const [isSubMenuVisible, toggleSubMenu] = useState(false)
   const onToggleMobileMenu = () => toggleMobileMenu(!isMobileMenuVisible)
@@ -23,19 +16,12 @@ const Header = props => {
       <HeaderContainer>
         <div className='container'>
           <Inner>
-            <Link to="/">
-              <Logo>
-                <>
-                  <img
-                    src={octocat}
-                    style={{ width: '25px', height: '25px' }}
-                    alt="Hi 👋🏼"
-                  />
-                  &nbsp;
-                  <Text>{logoText}</Text>
-                </>
-              </Logo>
-            </Link>
+            <LogoContainer className='logo-container'>
+              <Link to="/" className='home-link' activeClassName="active">
+                <LogoImg src={octocat} alt="Hi 👋🏼" className='logo' />
+                <LogoText className='logo-text'>{logoText}</LogoText>
+              </Link>
+            </LogoContainer>
 
             <Right>
               <Menu
@@ -97,19 +83,43 @@ const Inner = styled.div`
   justify-content: space-between;
 `
 
-const Logo = styled.div`
+const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   text-decoration: none;
   font-weight: bold;
 
-  & img {
-    height: 44px;
+  & a.active {
+    color: inherit;
+  }
+
+  &:hover .logo, .active .logo {
+    transform: translate(-10px, 0);
+  }
+
+  &:hover .logo-text, .active .logo-text {
+    opacity: 1;
+    transform: translate(-35px, 0);
   }
 `
 
-const Text = styled.span`
+const LogoText = styled.span`
   font-size: 25px;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+  cursor: default;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &:active {
+    transform: translate(0px, 10px);
+  }
+`
+
+const LogoImg = styled.img`
+  display: inline;
+  height: 25px;
+  transform: translate(0, 0);
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 `
 

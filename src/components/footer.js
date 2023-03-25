@@ -38,15 +38,15 @@ export default Footer
 
 const FooterContainer = styled.footer`
   font-size: 1rem;
-  background-image: linear-gradient(#fff0,#fd9dcc2b,#fd9dcc85);
+  /* background-image: linear-gradient(#fff0,#fd9dcc2b,#fd9dcc85); */
   min-height: 100px;
   padding-bottom: 10px;
   display: flex;
   align-items: flex-end;
 
-  .dark & {
+  /* .dark & {
     background: linear-gradient(#fff0,#54233b26,#54233b85);
-  }
+  } */
 `
 
 const FooterContent = styled.div`
@@ -56,6 +56,10 @@ const FooterContent = styled.div`
 
 const Item = styled.span`
   color: var(--dark-color-secondary);
+
+  .dark & {
+    color: var(--light-background-secondary);
+  }
 
   &:not(:first-of-type) {
     @media (min-width: 576px) {

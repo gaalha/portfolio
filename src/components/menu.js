@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import styled from 'styled-components'
 import Icon from './icon'
+import '../styles/components/header.css'
 
 const MainMenu = ({ mainMenu, mainMenuItems, isMobileMenu }) => {
   const menu = mainMenu.slice(0)
@@ -11,7 +12,7 @@ const MainMenu = ({ mainMenu, mainMenuItems, isMobileMenu }) => {
 
   return menu.map((menuItem, index) => (
     <li key={index}>
-      <Link to={menuItem.path}>{menuItem.title}</Link>
+      <Link to={menuItem.path} activeClassName="active">{menuItem.title}</Link>
     </li>
   ))
 }
@@ -22,7 +23,7 @@ const SubMenu = ({ mainMenu, mainMenuItems, onToggleSubMenu }) => {
 
   const items = menu.map((menuItem, index) => (
     <li key={index}>
-      <Link to={menuItem.path}>{menuItem.title}</Link>
+      <Link to={menuItem.path} activeClassName="active">{menuItem.title}</Link>
     </li>
   ))
 
@@ -96,7 +97,7 @@ const Menu = ({
       <ThemeToggler>
         {({ theme, toggleTheme }) => (
           <Toggler onClick={() => toggleTheme((theme === 'light') ? 'dark' : 'light')}>
-            {theme === 'dark' ? (<Emoji isDark={true}>🌞</Emoji>) : (<Emoji isDark={false}>🌚</Emoji>)}
+            <Emoji isDark={theme === 'dark'}>{theme === 'dark' ? '🌞' : '🌚'}</Emoji>
           </Toggler>
         )}
       </ThemeToggler>
